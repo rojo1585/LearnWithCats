@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             jump = true;
         }
 
-        animator.SetFloat("SpeedY",rb2D.velocity.y);
+        animator.SetFloat("SpeedY",rb2D.velocity.y); 
         
     }
 
