@@ -162,8 +162,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1711415, y: 0.34455544}
-  m_Size: {x: 1.2501924, y: 1.4196965}
+  m_Offset: {x: 0.2, y: 0.10382855}
+  m_Size: {x: 1.2501924, y: 1.5572546}
   m_Direction: 0
 --- !u!114 &53990955
 MonoBehaviour:
@@ -179,19 +179,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDead: 0
   speed: 1
-  jumpForce: 250
+  jumpForce: 400
   onTheFloor: 0
+  changeControll: 0
   boxZize: {x: 1, y: 1, z: 0}
+  pointInitialFloor: {fileID: 1183194280}
   isFloor:
     serializedVersion: 2
     m_Bits: 8
   floorController: {fileID: 303896858}
+  pointToFloor: {fileID: 828874973}
   jump: 0
+  colliderHeaderRun: {fileID: 53990960}
+  colliderBodyRun: {fileID: 53990954}
+  colliderJump: {fileID: 53990959}
 --- !u!4 &53990957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4881386325594014, guid: 1713af3811cfb9d4d82968643d5b8586, type: 3}
   m_PrefabInstance: {fileID: 1689011298}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &53990959
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53990950}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.14, y: 2.6924613}
+  m_Size: {x: 1.3182108, y: 2.5995479}
+  m_Direction: 0
+--- !u!70 &53990960
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53990950}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.19, y: 1.5074092}
+  m_Size: {x: 1.3482754, y: 1.3712022}
+  m_Direction: 0
 --- !u!4 &270203339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4455060233261340, guid: 586944ae76633a24286eb562a8392d22, type: 3}
@@ -221,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303896857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -0.32, z: 0}
+  m_LocalPosition: {x: 0.06, y: -0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -433,12 +471,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828874972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: 1.57, z: 0}
+  m_LocalPosition: {x: 0.39, y: 1.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 53990957}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1183194279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183194280}
+  m_Layer: 0
+  m_Name: PointInitialFloor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183194280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183194279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13, y: -0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53990957}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1689011298
 PrefabInstance:
@@ -481,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4881386325594014, guid: 1713af3811cfb9d4d82968643d5b8586, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.21
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 4881386325594014, guid: 1713af3811cfb9d4d82968643d5b8586, type: 3}
       propertyPath: m_LocalPosition.z
