@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask isFloor;
     [SerializeField] private Transform floorController;
     [SerializeField] private Transform pointToFloor;
-    [SerializeField] private bool jump;
+    [SerializeField] public bool jump;
     [SerializeField] private Collider2D colliderHeaderRun;
     [SerializeField] private Collider2D colliderBodyRun;
     [SerializeField] private Collider2D colliderJump;
