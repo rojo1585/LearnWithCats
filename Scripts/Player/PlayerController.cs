@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool onTheFloor;
     [SerializeField] public bool changeControll;
     [SerializeField] private Vector3 boxZize;
-    [SerializeField] private Vector3 boxZeroZize;
+    
     [SerializeField] private Transform pointInitialFloor;
     [SerializeField] private LayerMask isFloor;
     [SerializeField] private Transform floorController;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isDead = false;
-        boxZeroZize = new Vector3(0, 0, 0);
+        
         
 
     }
