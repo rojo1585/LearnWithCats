@@ -22,9 +22,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform floorController;
     [SerializeField] private Transform pointToFloor;
     [SerializeField] public bool jump;
-    [SerializeField] private Collider2D colliderHeaderRun;
-    [SerializeField] private Collider2D colliderBodyRun;
-    [SerializeField] private Collider2D colliderJump;
+    //[SerializeField] private Collider2D colliderHeaderRun;
+    [SerializeField] private BoxCollider2D playerCollider;
+    //[SerializeField] private Collider2D colliderJump;
     // Start is called before the first frame update
     void Awake(){
         
@@ -63,9 +63,10 @@ public class PlayerController : MonoBehaviour
 
     private void IsOnFloor(){   
             //floorController.position  = pointInitialFloor.position;
-            colliderJump.enabled = false;
-            colliderBodyRun.enabled = true;
-            colliderHeaderRun.enabled = true;
+            //colliderJump.enabled = false;
+            //colliderBodyRun.enabled = true;
+            //colliderHeaderRun.enabled = true;
+            playerCollider.offset = new Vector2(0.1037593f, 0.9230986f);
     }
     private void Movement(float speed){
         Vector3 targetSpeed = new Vector2(speed, rb2D.velocity.y);
@@ -88,10 +89,11 @@ public class PlayerController : MonoBehaviour
             onTheFloor = false;
             changeControll = false;
             rb2D.AddForce(new Vector2(0f, jumpForce));
+            playerCollider.offset = new Vector2(0.1037593f, 2.79f);
             //floorController.position = pointToFloor.position;
-            colliderBodyRun.enabled = false;
-            colliderHeaderRun.enabled = false;
-            colliderJump.enabled = true;
+            //colliderBodyRun.enabled = false;
+            //colliderHeaderRun.enabled = false;
+            //colliderJump.enabled = true;
         }
         
     }
