@@ -171,7 +171,7 @@ MonoBehaviour:
   jumpForce: 500
   onTheFloor: 0
   changeControll: 0
-  boxZize: {x: 1, y: 1, z: 0}
+  boxZize: {x: 1, y: 0.5, z: 0}
   pointInitialFloor: {fileID: 1183194280}
   isFloor:
     serializedVersion: 2
@@ -581,7 +581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303896857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: -0.58, z: 0}
+  m_LocalPosition: {x: 0.21, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1077,7 +1077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828874972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.39, y: 1.64, z: 0}
+  m_LocalPosition: {x: 0.39, y: 1.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

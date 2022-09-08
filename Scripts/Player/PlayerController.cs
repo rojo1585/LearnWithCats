@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool onTheFloor;
     [SerializeField] public bool changeControll;
     [SerializeField] private Vector3 boxZize;
+    [SerializeField] private Vector3 boxZeroZize;
     [SerializeField] private Transform pointInitialFloor;
     [SerializeField] private LayerMask isFloor;
     [SerializeField] private Transform floorController;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isDead = false;
+        boxZeroZize = new Vector3(0, 0, 0);
         
 
     }
@@ -51,8 +53,17 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate(){
         //condicion para saber que estamos en el suelo mieentra que el controlador de piso es te tocando el piso 
-        onTheFloor = Physics2D.OverlapBox(floorController.position, boxZize, 0f, isFloor);
-        animator.SetBool("OnTheFloor",onTheFloor);
+        if (rb2D.velocity.y >= 0)
+        {
+            boxZize = new Vector3(1, 0.5f, 0);
+            onTheFloor = Physics2D.OverlapBox(floorController.position, boxZize, 0f, isFloor);
+            animator.SetBool("OnTheFloor",onTheFloor);
+        }else
+        {
+            boxZize = new Vector3(0, 0, 0) ;
+            animator.SetBool("OnTheFloor",onTheFloor);
+        }
+        
         
         //Mover
         if(!isDead){Movement(speed * Time.fixedDeltaTime); Jump();}
@@ -67,6 +78,7 @@ public class PlayerController : MonoBehaviour
             //colliderBodyRun.enabled = true;
             //colliderHeaderRun.enabled = true;
             playerCollider.offset = new Vector2(0.1037593f, 0.9230986f);
+            floorController.position = pointInitialFloor.position;
     }
     private void Movement(float speed){
         Vector3 targetSpeed = new Vector2(speed, rb2D.velocity.y);
@@ -90,6 +102,7 @@ public class PlayerController : MonoBehaviour
             changeControll = false;
             rb2D.AddForce(new Vector2(0f, jumpForce));
             playerCollider.offset = new Vector2(0.1037593f, 2.79f);
+            floorController.position = pointToFloor.position;
             //floorController.position = pointToFloor.position;
             //colliderBodyRun.enabled = false;
             //colliderHeaderRun.enabled = false;
