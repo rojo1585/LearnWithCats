@@ -5,10 +5,11 @@ using UnityEngine;
 public class CoinController : MonoBehaviour
 {
 
-    // Start is called before the first frame update
+    private Score score;
+    private int value;
     void Start()
     {
-        
+        value = 1;
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class CoinController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Player"))
         {
+            score.AddCoins(value);
             DestroyCoin();
         }
     }
