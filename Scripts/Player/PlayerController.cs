@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     private Animator animator;
+    HealtController healtController;
     
 
     
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private Collider2D colliderJump;
     [Header("Life")]
     [SerializeField] public int life;
-
+    
     
     // Start is called before the first frame update
     void Awake(){
@@ -38,8 +39,9 @@ public class PlayerController : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        healtController = GetComponent<HealtController>();
         isDead = false;
-        life = 3;
+        life = 2;
     }
 
     // Update is called once per frame
@@ -47,6 +49,8 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump")){
             jump = true;
+            
+            //healtController.DestroyHeart();
         }
 
         animator.SetFloat("SpeedY",rb2D.velocity.y); 
@@ -105,6 +109,7 @@ public class PlayerController : MonoBehaviour
             rb2D.AddForce(new Vector2(0f, jumpForce));
             playerCollider.offset = new Vector2(0.1037593f, 2.79f);
             floorController.position = pointToFloor.position;
+            
             //floorController.position = pointToFloor.position;
             //colliderBodyRun.enabled = false;
             //colliderHeaderRun.enabled = false;

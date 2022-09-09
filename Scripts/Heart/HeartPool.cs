@@ -25,7 +25,7 @@ public class HeartPool : MonoBehaviour
     {
         poolSize = 3;
         AddHeartToPool(poolSize);
-        RequesHeart();
+        //RequesHeart();
         //AddEmpyHeartToPool(poolSize);
         
     }
@@ -54,7 +54,7 @@ public class HeartPool : MonoBehaviour
 
 
     //----------------Empy Heart Methods--------------------------------//
-    /*private void  AddEmpyHeartToPool(int amount){
+    private void  AddEmpyHeartToPool(int amount){
         for(int i = 0; i < poolSize; i++){
             GameObject empyHeart = Instantiate(prefabEmpyHeart);
             empyHeart.SetActive(false);
@@ -70,9 +70,9 @@ public class HeartPool : MonoBehaviour
                 return empyHeartList[i];
             }
         }
-        AddHeartToPool(1);
+        AddEmpyHeartToPool(1);
         empyHeartList[heartList.Count -1].SetActive(true);
         return empyHeartList[empyHeartList.Count - 1];
     }
-*/
+
 }
