@@ -15,8 +15,8 @@ public class HealtController : MonoBehaviour
     {
         
         playerController = GetComponent<PlayerController>();
-        InitalSpawnHeart();
-        InitalSpawnEmpyHeart();
+        //InitalSpawnHeart();
+        //InitalSpawnEmpyHeart();
         
     }
 

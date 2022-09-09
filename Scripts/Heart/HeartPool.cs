@@ -54,6 +54,7 @@ public class HeartPool : MonoBehaviour
 
 
     //----------------Empy Heart Methods--------------------------------//
+    
     private void  AddEmpyHeartToPool(int amount){
         for(int i = 0; i < poolSize; i++){
             GameObject empyHeart = Instantiate(prefabEmpyHeart);

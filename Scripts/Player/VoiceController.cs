@@ -39,7 +39,6 @@ public class VoiceController : MonoBehaviour
         playerController.Jump();
         //transform.Translate(0,10,0);
     }
-   
 
 
 }

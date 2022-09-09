@@ -40,10 +40,8 @@ public class PlayerController : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        healtController = GetComponent<HealtController>();
-        
         isDead = false;
-        life = 3;
+        life = 2;
     }
 
     // Update is called once per frame
@@ -51,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump")){
             jump = true;
+            HeartPool.Instance.heartList[2].SetActive(false);
             //HeartCanvasController.Instance.DestroyHeart();
             //healtController.DestroyHeart();
         }
@@ -74,7 +73,7 @@ public class PlayerController : MonoBehaviour
         
         
         //Mover
-        if(!isDead && jump){Movement(speed * Time.fixedDeltaTime); Jump();}
+        if(!isDead){Movement(speed * Time.fixedDeltaTime); Jump();}
 
         //evitar que siempre se mande la opcion saltar    
         jump = false;
@@ -104,7 +103,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void Jump(){
+    public void Jump(){
         if(onTheFloor && jump){
             onTheFloor = false;
             changeControll = false;
@@ -126,16 +125,8 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void TakeDamagePlayer(){
-        HeartPool.Instance.heartList[life-1].SetActive(false);
-        life--;
-    }
-
     public void DeadPlayer(){
-        if (life < 1){
-            isDead = true;
-            animator.SetBool("Dead",true);    
-        }
-        
+        isDead = true;
+        animator.SetTrigger("Dead");
     }
 }
