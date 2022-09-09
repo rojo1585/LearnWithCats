@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private Collider2D colliderJump;
     [Header("Life")]
     [SerializeField] public int life;
-    HeartCanvasController heartCanvasController;
+    [SerializeField] GameObject a;
+    
     
     
     // Start is called before the first frame update
@@ -47,9 +48,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") && !isDead){
             jump = true;
-            HeartPool.Instance.heartList[2].SetActive(false);
+            GameObject heart = HeartPool.Instance.RequesHeart();
+            heart.transform.position = a.transform.position;
             //HeartCanvasController.Instance.DestroyHeart();
             //healtController.DestroyHeart();
         }
@@ -104,7 +106,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Jump(){
-        if(onTheFloor && jump){
+        if(onTheFloor && jump && !isDead){
             onTheFloor = false;
             changeControll = false;
             rb2D.AddForce(new Vector2(0f, jumpForce));
@@ -125,8 +127,15 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void TakeDamagePlayer(){
+        life--;
+        if(life <= 0){
+            DeadPlayer();
+        }
+    }
+
     public void DeadPlayer(){
         isDead = true;
-        animator.SetTrigger("Dead");
+        animator.SetBool("Dead",true);
     }
 }

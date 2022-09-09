@@ -5,38 +5,36 @@ using UnityEngine;
 public class HealtController : MonoBehaviour
 {
     //[SerializeField] private List<Transform> positionHearts;
-    [SerializeField] private Transform[] pointToSpawn;
+    [SerializeField] private List<GameObject> pointToSpawn;
+    //[SerializeField] private Transform[] p;
     //[SerializeField] private GameObject[] heartList;
     
     //[SerializeField] private GameObject[] empyHeart;
-    PlayerController playerController;
+    
 
     void Start()
-    {
-        
-        playerController = GetComponent<PlayerController>();
-        //InitalSpawnHeart();
-        //InitalSpawnEmpyHeart();
-        
+      {     
+        InitalSpawnHeart();
+        InitalSpawnEmpyHeart();
     }
 
     private void InitalSpawnHeart(){
-        for (int i = 0; i < pointToSpawn.Length; i++)
-        {
-            GameObject heart = HeartPool.Instance.RequesHeart();
-            heart.transform.position = pointToSpawn[i].position;
-            //heartList[i] = heart;
-        }
-        
+
+            for ( int i = 0; i < pointToSpawn.Count ; i++)
+            {
+                GameObject heart = HeartPool.Instance.RequesHeart();
+                heart.transform.position = pointToSpawn[i].transform.position;
+            }
     }
 
     private void InitalSpawnEmpyHeart(){
-        for (int i = 0; i < pointToSpawn.Length; i++)
-        {
-            GameObject empyHeart = HeartPool.Instance.RequesEmpyHeart();
-            empyHeart.transform.position = pointToSpawn[i].position;
-            empyHeart.SetActive(false);
-        }
+            for (int i = 0; i < pointToSpawn.Count; i++)
+            {
+                GameObject empyHeart = HeartPool.Instance.RequesEmpyHeart();
+                empyHeart.transform.position = pointToSpawn[i].transform.position;
+                empyHeart.SetActive(false);
+            }
+        
         
     }
 

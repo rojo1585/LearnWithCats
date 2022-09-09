@@ -32,7 +32,7 @@ public class HeartPool : MonoBehaviour
 
     
     private void  AddHeartToPool(int amount){
-        for(int i = 0; i < poolSize; i++){
+        for(int i = 0; i < 3; i++){
             GameObject heart = Instantiate(prefabHeart);
             heart.SetActive(false);
             heartList.Add(heart);
@@ -54,9 +54,9 @@ public class HeartPool : MonoBehaviour
 
 
     //----------------Empy Heart Methods--------------------------------//
-    
+
     private void  AddEmpyHeartToPool(int amount){
-        for(int i = 0; i < poolSize; i++){
+        for(int i = 0; i < 3; i++){
             GameObject empyHeart = Instantiate(prefabEmpyHeart);
             empyHeart.SetActive(false);
             empyHeartList.Add(empyHeart);
