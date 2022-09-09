@@ -54,13 +54,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Jump") && !isDead){
-            jump = true;
-            TakeDamagePlayer();           
+            jump = true;           
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            AddLife();
-        }
+        
 
         animator.SetFloat("SpeedY",rb2D.velocity.y); 
         
