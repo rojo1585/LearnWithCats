@@ -7,8 +7,8 @@ public class HeartPool : MonoBehaviour
     [SerializeField] private GameObject prefabHeart;
     [SerializeField] private GameObject prefabEmpyHeart;
     private int poolSize;
-    [SerializeField] private List<GameObject> heartList;
-    [SerializeField] private List<GameObject> empyHeartList;
+    [SerializeField] public List<GameObject> heartList;
+    [SerializeField] public List<GameObject> empyHeartList;
 
     private static HeartPool instance;
     public static HeartPool Instance { get {return instance;}}
@@ -24,9 +24,9 @@ public class HeartPool : MonoBehaviour
     void Start()
     {
         poolSize = 3;
-        AddHeartToPool(poolSize);
+        AddHeartToPool(3);
         //RequesHeart();
-        //AddEmpyHeartToPool(poolSize);
+        AddEmpyHeartToPool(3);
         
     }
 

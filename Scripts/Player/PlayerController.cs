@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private Collider2D colliderJump;
     [Header("Life")]
     [SerializeField] public int life;
+    HeartCanvasController heartCanvasController;
     
     
     // Start is called before the first frame update
@@ -40,8 +41,9 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         healtController = GetComponent<HealtController>();
+        
         isDead = false;
-        life = 2;
+        life = 3;
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump")){
             jump = true;
-            
+            //HeartCanvasController.Instance.DestroyHeart();
             //healtController.DestroyHeart();
         }
 
@@ -72,7 +74,7 @@ public class PlayerController : MonoBehaviour
         
         
         //Mover
-        if(!isDead){Movement(speed * Time.fixedDeltaTime); Jump();}
+        if(!isDead && jump){Movement(speed * Time.fixedDeltaTime); Jump();}
 
         //evitar que siempre se mande la opcion saltar    
         jump = false;
@@ -102,7 +104,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void Jump(){
+    private void Jump(){
         if(onTheFloor && jump){
             onTheFloor = false;
             changeControll = false;
@@ -124,8 +126,16 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void TakeDamagePlayer(){
+        HeartPool.Instance.heartList[life-1].SetActive(false);
+        life--;
+    }
+
     public void DeadPlayer(){
-        isDead = true;
-        animator.SetTrigger("Dead");
+        if (life < 1){
+            isDead = true;
+            animator.SetBool("Dead",true);    
+        }
+        
     }
 }

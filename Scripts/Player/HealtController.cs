@@ -6,6 +6,8 @@ public class HealtController : MonoBehaviour
 {
     //[SerializeField] private List<Transform> positionHearts;
     [SerializeField] private Transform[] pointToSpawn;
+    //[SerializeField] private GameObject[] heartList;
+    
     //[SerializeField] private GameObject[] empyHeart;
     PlayerController playerController;
 
@@ -14,6 +16,7 @@ public class HealtController : MonoBehaviour
         
         playerController = GetComponent<PlayerController>();
         InitalSpawnHeart();
+        InitalSpawnEmpyHeart();
         
     }
 
@@ -22,6 +25,14 @@ public class HealtController : MonoBehaviour
         {
             GameObject heart = HeartPool.Instance.RequesHeart();
             heart.transform.position = pointToSpawn[i].position;
+            //heartList[i] = heart;
+        }
+        
+    }
+
+    private void InitalSpawnEmpyHeart(){
+        for (int i = 0; i < pointToSpawn.Length; i++)
+        {
             GameObject empyHeart = HeartPool.Instance.RequesEmpyHeart();
             empyHeart.transform.position = pointToSpawn[i].position;
             empyHeart.SetActive(false);
