@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private Collider2D colliderHeaderRun;
     [SerializeField] private BoxCollider2D playerCollider;
     //[SerializeField] private Collider2D colliderJump;
+    [Header("Life")]
+    [SerializeField] public int life;
+
+    
     // Start is called before the first frame update
     void Awake(){
         
@@ -35,9 +39,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isDead = false;
-        
-        
-
+        life = 3;
     }
 
     // Update is called once per frame
@@ -117,4 +119,8 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void DeadPlayer(){
+        isDead = true;
+        animator.SetTrigger("Dead");
+    }
 }
