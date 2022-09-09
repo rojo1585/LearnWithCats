@@ -24,7 +24,8 @@ public class Score : MonoBehaviour
     }
 
     public void AddCoins(int amount){
-        coins +=  amount;        
+        coins +=  amount;    
+        textMesh.text = coins.ToString();    
     }
     
 }

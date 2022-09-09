@@ -25,7 +25,8 @@ public class CoinController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Player"))
         {
-            score.AddCoins(value);
+            Score.Instance.AddCoins(value);
+            
             DestroyCoin();
         }
     }
