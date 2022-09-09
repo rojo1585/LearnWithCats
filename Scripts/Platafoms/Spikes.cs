@@ -24,7 +24,11 @@ public class Spikes : MonoBehaviour
         rb2D.gravityScale  = 1;
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("Player")){
+            PlayerController.Instance.TakeDamagePlayer();
+        }
+    }
     
     
 }

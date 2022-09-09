@@ -13,9 +13,9 @@ public class HealtController : MonoBehaviour
     
 
     void Start()
-      {     
+    {     
         InitalSpawnHeart();
-        InitalSpawnEmpyHeart();
+        //InitalSpawnEmpyHeart();
     }
 
     private void InitalSpawnHeart(){
@@ -24,19 +24,32 @@ public class HealtController : MonoBehaviour
             {
                 GameObject heart = HeartPool.Instance.RequesHeart();
                 heart.transform.position = pointToSpawn[i].transform.position;
-            }
-    }
 
+                GameObject empyHeart = HeartPool.Instance.RequesEmpyHeart();
+                empyHeart.transform.position = pointToSpawn[i].transform.position;
+            }
+            /*
+            GameObject heartOne = HeartPool.Instance.RequesHeart();
+            heartOne.transform.position = pointToSpawn[0].transform.position;
+
+            GameObject heartTwo = HeartPool.Instance.RequesHeart();
+            heartTwo.transform.position = pointToSpawn[1].transform.position;
+
+            GameObject heartTree = HeartPool.Instance.RequesHeart();
+            heartTree.transform.position = pointToSpawn[2].transform.position;*/
+    }
+    /*
     private void InitalSpawnEmpyHeart(){
             for (int i = 0; i < pointToSpawn.Count; i++)
             {
                 GameObject empyHeart = HeartPool.Instance.RequesEmpyHeart();
                 empyHeart.transform.position = pointToSpawn[i].transform.position;
-                empyHeart.SetActive(false);
+                
+                //empyHeart.SetActive(false);
             }
         
         
-    }
+    }*/
 
 
 /*

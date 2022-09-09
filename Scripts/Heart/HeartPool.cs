@@ -23,16 +23,16 @@ public class HeartPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        poolSize = 3;
-        AddHeartToPool(3);
+        poolSize = 1;
+        AddHeartToPool(0);
         //RequesHeart();
-        AddEmpyHeartToPool(3);
+        AddEmpyHeartToPool(0);
         
     }
 
     
     private void  AddHeartToPool(int amount){
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < amount; i++){
             GameObject heart = Instantiate(prefabHeart);
             heart.SetActive(false);
             heartList.Add(heart);
@@ -56,7 +56,7 @@ public class HeartPool : MonoBehaviour
     //----------------Empy Heart Methods--------------------------------//
 
     private void  AddEmpyHeartToPool(int amount){
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < amount ; i++){
             GameObject empyHeart = Instantiate(prefabEmpyHeart);
             empyHeart.SetActive(false);
             empyHeartList.Add(empyHeart);

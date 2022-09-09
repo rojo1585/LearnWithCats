@@ -29,20 +29,25 @@ public class PlayerController : MonoBehaviour
     //[SerializeField] private Collider2D colliderJump;
     [Header("Life")]
     [SerializeField] public int life;
-    [SerializeField] GameObject a;
     
+    private static PlayerController instance;
+    public static PlayerController Instance {get {return instance;}}
     
     
     // Start is called before the first frame update
     void Awake(){
-        
+        if (instance == null){
+            instance = this;
+        }else{
+            Destroy(gameObject);
+        }
     }
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isDead = false;
-        life = 2;
+        life = 3;
     }
 
     // Update is called once per frame
@@ -50,10 +55,11 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && !isDead){
             jump = true;
-            GameObject heart = HeartPool.Instance.RequesHeart();
-            heart.transform.position = a.transform.position;
-            //HeartCanvasController.Instance.DestroyHeart();
-            //healtController.DestroyHeart();
+            TakeDamagePlayer();           
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            AddLife();
         }
 
         animator.SetFloat("SpeedY",rb2D.velocity.y); 
@@ -128,10 +134,21 @@ public class PlayerController : MonoBehaviour
     }
 
     public void TakeDamagePlayer(){
+        if(life > 0){
+            HeartPool.Instance.heartList[life-1].SetActive(false);
+        }
+        
         life--;
         if(life <= 0){
             DeadPlayer();
         }
+    }
+    public void AddLife(){
+        if(life < 3){
+            HeartPool.Instance.heartList[life].SetActive(true);
+            life++;
+        }
+        
     }
 
     public void DeadPlayer(){

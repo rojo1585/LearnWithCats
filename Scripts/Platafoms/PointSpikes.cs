@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointSpikes : MonoBehaviour
 {
-    public Spikes spikes;
+    Spikes spikes;
 
     private void Start(){
         spikes = GameObject.Find("Spikes").GetComponent<Spikes>();
