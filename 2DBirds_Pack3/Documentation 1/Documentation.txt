@@ -1,0 +1,31 @@
+	
+--------------2D Birds Pack3----------------------------
+
+This package contains birds spritesheet animations for 2D Games.
+
+Technical Details:-
+
+		- Resolution : 4000 * 2504
+		- Spritesheets : 16
+		- Frame rate : 25
+		
+Features:-
+
+	- 5 Birds and their varients
+	- Simple cartoon stylized birds
+	- Easy to change colors
+	- Prefabs included
+		
+How to use:-
+	
+	Simply drag and drop the "Birds" prefab to your scene and use it.
+	(Prefab(s) located under 
+	Asset > Birds Pack3 > Prefabs).
+
+..................................................................................
+
+About Us : We are "SR Studios Kerala", Game developing company located in Alappuzha, Kerala, India
+
+Contact : srstudioskerala@gmail.com
+
+................Thanks for downloading this package................................
