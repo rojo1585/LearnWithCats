@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && !isDead){
             jump = true;           
-        }
+        }//else{playerCollider.offset = new Vector2(0.1037593f, 0.9230986f);}
         
 
         animator.SetFloat("SpeedY",rb2D.velocity.y); 
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
             //colliderJump.enabled = false;
             //colliderBodyRun.enabled = true;
             //colliderHeaderRun.enabled = true;
-            playerCollider.offset = new Vector2(0.1037593f, 0.9230986f);
+            
             floorController.position = pointInitialFloor.position;
     }
     private void Movement(float speed){
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
             onTheFloor = false;
             changeControll = false;
             rb2D.AddForce(new Vector2(0f, jumpForce));
-            playerCollider.offset = new Vector2(0.1037593f, 2.79f);
+            //playerCollider.offset = new Vector2(0.1037593f, 2.79f);
             floorController.position = pointToFloor.position;
             
             //floorController.position = pointToFloor.position;

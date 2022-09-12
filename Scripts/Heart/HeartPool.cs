@@ -23,10 +23,10 @@ public class HeartPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        poolSize = 1;
-        AddHeartToPool(0);
+        poolSize = 0;
+        AddHeartToPool(poolSize);
         //RequesHeart();
-        AddEmpyHeartToPool(0);
+        AddEmpyHeartToPool(poolSize);
         
     }
 
