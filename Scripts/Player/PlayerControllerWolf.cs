@@ -15,6 +15,7 @@ public class PlayerControllerWolf : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float jumpForce;
     [SerializeField] private bool onTheFloor;
+    private bool jump;
     
     [Header("Life")]
     public bool isDead;
@@ -34,20 +35,22 @@ public class PlayerControllerWolf : MonoBehaviour
     
     void Update()
     {
-        Jump();
-        animator.SetFloat("SpeedY",rb2D.velocity.y); 
+        if(Input.GetButtonDown("Jump")){
+            jump = true;
+        }
     }
 
     void FixedUpdate(){
         animator.SetBool("OnTheFloor", IsOnFloor());
         if(!isDead){Movement(speed * Time.fixedDeltaTime); Jump();}
+        animator.SetFloat("SpeedY",rb2D.velocity.y); 
+        jump = false;
 
     }
 
     public void Jump(){
-        if(Input.GetKeyDown(KeyCode.Space) && IsOnFloor()){
+        if(IsOnFloor() && jump){
             rb2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
         }
     }
 
