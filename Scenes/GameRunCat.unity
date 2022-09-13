@@ -710,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: -1.38, z: -10}
+  m_LocalPosition: {x: -7.28, y: -4.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1778,7 +1778,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1956563992}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -1805,7 +1805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769123384}
   m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: -1.38, z: -10}
+  m_LocalPosition: {x: -7.28, y: -4.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2003,10 +2003,10 @@ GameObject:
   - component: {fileID: 1956563992}
   - component: {fileID: 1956563991}
   - component: {fileID: 1956563990}
-  - component: {fileID: 1956563996}
   - component: {fileID: 1956563995}
   - component: {fileID: 1956563994}
-  - component: {fileID: 1956563993}
+  - component: {fileID: 1956563996}
+  - component: {fileID: 1956563997}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2104,33 +2104,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1956563993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956563989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2550bec95c61bc489361dbb9637119b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDead: 0
-  speed: 1
-  jumpForce: 0
-  onTheFloor: 0
-  changeControll: 0
-  boxZize: {x: 0.5, y: 0.3, z: 0}
-  pointInitialFloor: {fileID: 750818851}
-  isFloor:
-    serializedVersion: 2
-    m_Bits: 0
-  floorController: {fileID: 1909683803}
-  pointToFloor: {fileID: 161978963}
-  jump: 0
-  playerCollider: {fileID: 1956563995}
-  life: 0
 --- !u!50 &1956563994
 Rigidbody2D:
   serializedVersion: 4
@@ -2191,6 +2164,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 1956563995}
+--- !u!114 &1956563997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956563989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730580256bb1cce4ea03b7f6f042cce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFloor:
+    serializedVersion: 2
+    m_Bits: 8
+  speed: 250
+  jumpForce: 10
+  onTheFloor: 0
+  isDead: 0
 --- !u!1001 &1963663275
 PrefabInstance:
   m_ObjectHideFlags: 0
