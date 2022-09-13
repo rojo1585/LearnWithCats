@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8955667462030416167}
   m_Layer: 0
   m_Name: SpikePrefab
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8955667463729654206}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 8.33, y: 5.54, z: 0.095197685}
+  m_LocalPosition: {x: 9.43, y: 7.9, z: 0.095197685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
