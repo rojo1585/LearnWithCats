@@ -26,7 +26,7 @@ public class PlatafomController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         //pE2D.rotationalOffset = 0;
         //fallControl = false;
-        gameObject.layer = 3;
+        gameObject.layer = 2;
         
         
     }

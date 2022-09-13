@@ -48,7 +48,7 @@ public class Bird : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision ){
         if(collision.CompareTag("Player")){
             dead = true;
-            PlayerController.Instance.TakeDamagePlayer();
+            collision.GetComponent<PlayerControllerWolf>().TakeDamagePlayer();
         }
         if (collision.CompareTag("Ground"))
         {

@@ -18,6 +18,12 @@ public class PlayerControllerWolf : MonoBehaviour
     
     [Header("Life")]
     public bool isDead;
+    public int life;
+
+    
+    
+    
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -45,7 +51,7 @@ public class PlayerControllerWolf : MonoBehaviour
         }
     }
 
-    private bool IsOnFloor(){
+    public bool IsOnFloor(){
         RaycastHit2D raycastHit = Physics2D.BoxCast(playerCollider.bounds.center, new Vector2(playerCollider.bounds.size.x, playerCollider.bounds.size.y), 0f, Vector2.down, 0.2f, isFloor);
         return raycastHit.collider != null;
 
@@ -57,8 +63,31 @@ public class PlayerControllerWolf : MonoBehaviour
         //Agregar fuerza de desplasimeto a la derecha
         transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         transform.Translate(Vector3.right * speed * Time.deltaTime);
-        animator.SetBool("Run", true);
-
+        if(IsOnFloor()){animator.SetBool("Run", true);}else{animator.SetBool("Run", false);}
         
+    }
+
+    public void TakeDamagePlayer(){
+        if(life > 0){
+            HeartPool.Instance.heartList[life-1].SetActive(false);
+            animator.SetTrigger("TakeHit");
+        }
+        
+        life--;
+        if(life <= 0){
+            DeadPlayer();
+        }
+    }
+    public void AddLife(){
+        if(life < 3){
+            HeartPool.Instance.heartList[life].SetActive(true);
+            life++;
+        }
+        
+    }
+
+    public void DeadPlayer(){
+        isDead = true;
+        animator.SetBool("Dead",true);
     }
 }
