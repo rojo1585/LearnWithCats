@@ -10,12 +10,19 @@ public class LetterCart : MonoBehaviour
     public int allSlot;
     public int enableSlot;
     public int randNumer;
+    
+    
     public GameObject[] letters;
     [SerializeField]private GameObject[] slotList;
     public GameObject slotLetters;
 
     void Start()
     {
+        
+
+
+
+
         allSlot = slotLetters.transform.childCount;
         slotList = new GameObject[allSlot];
         for (int i = 0; i < allSlot; i++){
@@ -25,13 +32,14 @@ public class LetterCart : MonoBehaviour
                 
             }
         }
+        AddLetter();
         
     }
 
     void Update()
     {
         if (Input.GetButtonDown("Jump")){
-            AddLetter();
+            
         }
     }
 
