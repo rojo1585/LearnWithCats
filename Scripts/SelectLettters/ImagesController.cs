@@ -10,11 +10,31 @@ public class ImagesController : MonoBehaviour
     public string[] words;
     public string selectWord;
     private int numrRand;
+    public char[] splitWordList;
+    public int a;
+
+    public static ImagesController instance;
+    public static ImagesController Instance {get {return instance;}}
+
+    private void Awake() {
+        if (instance == null)
+        {
+            instance = this;
+        }else
+        {
+            Destroy(gameObject);
+        }
+
+        
+    }
+    
 
     private void Update() {
         if (Input.GetButtonDown("Jump"))
         {
-            SelectRandomImage() ;           
+            SelectRandomImage() ;
+            SplitWord();
+            a =selectWord.Length;           
         }
     }
 
@@ -22,7 +42,15 @@ public class ImagesController : MonoBehaviour
         numrRand =  Random.Range(0,4);
         panelShowImage.GetComponent<RawImage>().texture = images[numrRand];
         selectWord = words[numrRand];
+        
+    }
 
+    public void SplitWord(){
+        splitWordList = new char [selectWord.Length];
+        for (int i = 0; i < selectWord.Length ; i++)
+        {
+            splitWordList[i] = selectWord[i];
+        }
     }
 
 

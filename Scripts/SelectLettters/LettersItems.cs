@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LettersItems : MonoBehaviour
 {
     public int id;
-    public string type;
+    public char type;
     public Sprite icon;
 
     public bool selectLetter;

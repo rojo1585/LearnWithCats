@@ -18,11 +18,6 @@ public class LetterCart : MonoBehaviour
 
     void Start()
     {
-        
-
-
-
-
         allSlot = slotLetters.transform.childCount;
         slotList = new GameObject[allSlot];
         for (int i = 0; i < allSlot; i++){
@@ -32,7 +27,7 @@ public class LetterCart : MonoBehaviour
                 
             }
         }
-        AddLetter();
+        
         
     }
 
@@ -43,13 +38,24 @@ public class LetterCart : MonoBehaviour
         }
     }
 
-    public void AddLetter(){
+    public void AddLetterRandom(){
         for (int i = 0; i < allSlot; i++)
         {
             randNumer = Random.Range(0,25);
             if (slotList[i].GetComponent<Slot>().empy)
             {
                 slotList[i].GetComponent<Slot>().UpdateSlot(letters[randNumer].GetComponent<LettersItems>().icon); 
+            }
+        }
+    }
+
+    public void AddCorrectWord(){
+        for (int i = 0; i < allSlot; i++)
+        {
+            randNumer = Random.Range(0,26);
+            if (true)
+            {
+                
             }
         }
     }
