@@ -3591,6 +3591,10 @@ PrefabInstance:
       propertyPath: type
       value: 118
       objectReference: {fileID: 0}
+    - target: {fileID: 7216041885965334057, guid: 353908cd342f1e94a92e2c091fb2cdd3, type: 3}
+      propertyPath: selectLetter
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 353908cd342f1e94a92e2c091fb2cdd3, type: 3}
 --- !u!1 &1104143867 stripped
@@ -3911,6 +3915,7 @@ MonoBehaviour:
   allSlot: 0
   enableSlot: 0
   randNumer: 0
+  a: 0
   letters:
   - {fileID: 1700350357}
   - {fileID: 703407391}
