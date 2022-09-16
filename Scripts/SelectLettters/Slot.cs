@@ -22,4 +22,6 @@ public class Slot : MonoBehaviour
     public void UpdateSlot(Sprite spr){
         slotLetterChield.GetComponent<Image>().sprite = spr;
     }
+
+   
 }
