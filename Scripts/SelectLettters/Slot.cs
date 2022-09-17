@@ -23,5 +23,4 @@ public class Slot : MonoBehaviour
         slotLetterChield.GetComponent<Image>().sprite = spr;
     }
 
-   
 }

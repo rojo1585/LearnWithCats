@@ -10,7 +10,7 @@ public class ImagesController : MonoBehaviour
     public string[] words;
     public string selectWord;
     private int numrRand;
-    //public char[] splitWordList;
+    public char[] splitWordList;
     
     public static ImagesController instance;
     public static ImagesController Instance {get {return instance;}}
@@ -29,6 +29,7 @@ public class ImagesController : MonoBehaviour
     
     private void Start() {
         SelectRandomImage() ; 
+        SplitWord();
     }
     private void Update() {
         if (Input.GetButtonDown("Jump"))
@@ -42,7 +43,8 @@ public class ImagesController : MonoBehaviour
         selectWord = words[numrRand];
         
     }
-/*
+
+
     public void SplitWord(){
         splitWordList = new char [selectWord.Length];
         for (int i = 0; i < selectWord.Length ; i++)
@@ -51,6 +53,6 @@ public class ImagesController : MonoBehaviour
         }
     }
 
-*/
+
     
 }

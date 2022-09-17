@@ -8,35 +8,38 @@ public class LetterCart : MonoBehaviour
     public GameObject  paneLetters;
 
     public int allSlot;
+    public int allSlotAnswer;
     public int enableSlot;
     public int randNumer;
-    public int a;
+    public string a;
     
     
     public GameObject[] letters;
     [SerializeField]private GameObject[] slotList;
+    [SerializeField] private GameObject[] slotAnswerList;
     public GameObject slotLetters;
+    [SerializeField] private GameObject answerPanel;
+    [SerializeField] private GameObject panelPrefab;
 
     void Start()
     {
+        
         allSlot = slotLetters.transform.childCount;
         slotList = new GameObject[allSlot];
+        
         for (int i = 0; i < allSlot; i++){
             slotList[i] = slotLetters.transform.GetChild(i).gameObject;
-            if (slotList[i].GetComponent<Slot>().empy)
-            {
-                
-            }
         }
         
-
     }
 
     void Update()
     {
         if (Input.GetButtonDown("Jump")){
-            AddW();
-            AddLetterRandom();
+            AddCorrectWord();
+            //AddLetterRandom();
+            //MakePanelsAnswer();
+            //CheckAnswer();
         }
     }
 
@@ -51,39 +54,45 @@ public class LetterCart : MonoBehaviour
         }
     }
 
-    /*public void AddCorrectWord(){
-        for (int i = 0; i < ImagesController.Instance.selectWord.Length; i++)
-        {
-            randNumer = Random.Range(0,20);
-            for (int j = 0; j < allSlot; j++)
-            {     
-                if (slotList[j].GetComponent<Slot>().empy && letters[j].GetComponent<LettersItems>().type == ImagesController.Instance.selectWord[a])
-                {   
-                    if (a <ImagesController.Instance.selectWord.Length )
-                    {
-                        a++;  
-                        slotList[randNumer].GetComponent<Slot>().UpdateSlot(letters[j].GetComponent<LettersItems>().icon);          
-                        slotList[randNumer].GetComponent<Slot>().empy = true;
-                    }                        
-                }   
-            }
-            
-        }
-    }*/
 
-    public void AddW(){
-        foreach (char letter in ImagesController.Instance.selectWord)
+    public void AddCorrectWord(){
+        foreach (char letter in ImagesController.Instance.splitWordList)
         {
-            
-            for (int i = 0; i < allSlot; i++)
+            a = a + letter;
+            for (int i = 0; i < letters.Length;i++)
             {
                 if(letter == letters[i].GetComponent<LettersItems>().type){
-                    randNumer = Random.Range(1,20);
+                    randNumer = Random.Range(1,19);
                     slotList[randNumer].GetComponent<Slot>().UpdateSlot(letters[i].GetComponent<LettersItems>().icon);
                     slotList[randNumer].GetComponent<Slot>().empy = false;
                 }
             }
             
+        }
+    }
+
+
+    private void MakePanelsAnswer(){
+        
+
+        for (int i = 0; i < ImagesController.Instance.selectWord.Length; i++)
+        {
+            GameObject panel  = Instantiate(panelPrefab);
+            panel.transform.SetParent(answerPanel.transform);
+        }
+
+        allSlotAnswer = answerPanel.transform.childCount;
+        slotAnswerList = new GameObject[allSlotAnswer];
+
+        for (int i = 0; i < allSlotAnswer; i++){
+            slotAnswerList[i] = answerPanel.transform.GetChild(i).gameObject;
+        }
+        //panel.transform.scale = new Vector3(1,1,0);
+    }
+
+    public void CheckAnswer(){
+        for (int i = 0; i < allSlotAnswer; i++){
+            slotAnswerList[i] = answerPanel.transform.GetChild(i).gameObject;
         }
     }
 }
