@@ -15,20 +15,35 @@ public class LetterCart : MonoBehaviour
     
     
     public GameObject[] letters;
-    [SerializeField]private GameObject[] slotList;
-    [SerializeField] private GameObject[] slotAnswerList;
+    public GameObject[] slotList;
+    public GameObject[] slotAnswerList;
     public GameObject slotLetters;
     [SerializeField] private GameObject answerPanel;
     [SerializeField] private GameObject panelPrefab;
 
+    
+
+    public static LetterCart instance;
+    public static LetterCart Instance {get {return instance;}}
+
+    private void Awake() {
+        if (instance == null)
+        {
+            instance = this;
+        }else{
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         
+
         allSlot = slotLetters.transform.childCount;
         slotList = new GameObject[allSlot];
         
         for (int i = 0; i < allSlot; i++){
             slotList[i] = slotLetters.transform.GetChild(i).gameObject;
+            slotList[i].GetComponent<Slot>().id = i;
         }
         
     }
@@ -37,8 +52,8 @@ public class LetterCart : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump")){
             AddCorrectWord();
-            //AddLetterRandom();
-            //MakePanelsAnswer();
+            AddLetterRandom();
+            MakePanelsAnswer();
             //CheckAnswer();
         }
     }
@@ -86,13 +101,21 @@ public class LetterCart : MonoBehaviour
 
         for (int i = 0; i < allSlotAnswer; i++){
             slotAnswerList[i] = answerPanel.transform.GetChild(i).gameObject;
+            slotAnswerList[i].GetComponent<SlotAnswer>().type = ImagesController.Instance.splitWordList[i];
         }
         //panel.transform.scale = new Vector3(1,1,0);
     }
 
     public void CheckAnswer(){
-        for (int i = 0; i < allSlotAnswer; i++){
-            slotAnswerList[i] = answerPanel.transform.GetChild(i).gameObject;
+        for (int i = 0; i < slotAnswerList.Length; i++)
+        {
+            for (int j = 0; j < allSlot ; j++){
+                
+                if (slotList[i].GetComponent<Slot>().isSelect)
+                {
+                    slotAnswerList[i].GetComponent<Slot>().UpdateSlot(slotList[i].GetComponent<Slot>().icon);
+                }
+            }
         }
     }
 }
