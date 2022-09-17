@@ -26,17 +26,9 @@ public class Slot : MonoBehaviour
 
     public void UpdateSlot(Sprite spr){
         slotLetterChield.GetComponent<Image>().sprite = spr;
-        icon = slotLetterChield.GetComponent<Image>().sprite;
+        icon = spr;
     }
 
-    public void CheckAnswer(){
-        foreach (GameObject item in LetterCart.Instance.slotAnswerList)
-        {
-            if(this.type == item.AddComponent<SlotAnswer>().type){
-                item.GetComponent<SlotAnswer>().UpdateSlot(this.icon);
-            }else{isSelect = true;}            
-        }
-    }
 
     public void Select(){
         isSelect = true;

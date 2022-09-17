@@ -65,6 +65,8 @@ public class LetterCart : MonoBehaviour
             if (slotList[i].GetComponent<Slot>().empy)
             {
                 slotList[i].GetComponent<Slot>().UpdateSlot(letters[randNumer].GetComponent<LettersItems>().icon); 
+                slotList[i].GetComponent<Slot>().type = letters[randNumer].GetComponent<LettersItems>().type;
+                slotList[i].GetComponent<Slot>().empy = false;
             }
         }
     }
@@ -79,7 +81,9 @@ public class LetterCart : MonoBehaviour
                 if(letter == letters[i].GetComponent<LettersItems>().type){
                     randNumer = Random.Range(1,19);
                     slotList[randNumer].GetComponent<Slot>().UpdateSlot(letters[i].GetComponent<LettersItems>().icon);
+                    slotList[randNumer].GetComponent<Slot>().type = letters[i].GetComponent<LettersItems>().type;
                     slotList[randNumer].GetComponent<Slot>().empy = false;
+                    
                 }
             }
             
@@ -107,13 +111,13 @@ public class LetterCart : MonoBehaviour
     }
 
     public void CheckAnswer(){
-        for (int i = 0; i < slotAnswerList.Length; i++)
+        foreach (GameObject item in slotAnswerList)
         {
             for (int j = 0; j < allSlot ; j++){
                 
-                if (slotList[i].GetComponent<Slot>().isSelect)
+                if (slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type)
                 {
-                    slotAnswerList[i].GetComponent<Slot>().UpdateSlot(slotList[i].GetComponent<Slot>().icon);
+                    item.GetComponent<SlotAnswer>().UpdateSlot(slotList[j].GetComponent<Slot>().icon);
                 }
             }
         }

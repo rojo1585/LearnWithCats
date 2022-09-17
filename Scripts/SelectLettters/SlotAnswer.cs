@@ -9,14 +9,6 @@ public class SlotAnswer : MonoBehaviour
     public char type;
     public Sprite icon;
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-
     public void UpdateSlot(Sprite spr){
         this.GetComponent<Image>().sprite = spr;
     }
