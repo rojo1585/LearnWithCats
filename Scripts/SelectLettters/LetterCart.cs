@@ -12,6 +12,8 @@ public class LetterCart : MonoBehaviour
     public int enableSlot;
     public int randNumer;
     public string a;
+
+    public bool stop;
     
     
     public GameObject[] letters;
@@ -20,6 +22,7 @@ public class LetterCart : MonoBehaviour
     public GameObject slotLetters;
     [SerializeField] private GameObject answerPanel;
     [SerializeField] private GameObject panelPrefab;
+    [SerializeField] private Sprite correctSprite;
 
     
 
@@ -111,15 +114,19 @@ public class LetterCart : MonoBehaviour
     }
 
     public void CheckAnswer(){
+        
         foreach (GameObject item in slotAnswerList)
         {
             for (int j = 0; j < allSlot ; j++){
                 
-                if (slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type)
+                if (slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type )
                 {
                     item.GetComponent<SlotAnswer>().UpdateSlot(slotList[j].GetComponent<Slot>().icon);
+                    slotList[j].transform.GetChild(0).gameObject.SetActive(false);
+                    
                 }
             }
         }
+        
     }
 }

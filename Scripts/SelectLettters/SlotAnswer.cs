@@ -13,4 +13,6 @@ public class SlotAnswer : MonoBehaviour
         this.GetComponent<Image>().sprite = spr;
     }
 
+
+
 }
