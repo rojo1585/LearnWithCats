@@ -16,6 +16,7 @@ public class LetterCart : MonoBehaviour
     public bool stop;
     
     
+    
     public GameObject[] letters;
     public GameObject[] slotList;
     public GameObject[] slotAnswerList;
@@ -23,6 +24,7 @@ public class LetterCart : MonoBehaviour
     [SerializeField] private GameObject answerPanel;
     [SerializeField] private GameObject panelPrefab;
     [SerializeField] private Sprite correctSprite;
+    [SerializeField] private Sprite errorSprite;
 
     
 
@@ -70,6 +72,7 @@ public class LetterCart : MonoBehaviour
                 slotList[i].GetComponent<Slot>().UpdateSlot(letters[randNumer].GetComponent<LettersItems>().icon); 
                 slotList[i].GetComponent<Slot>().type = letters[randNumer].GetComponent<LettersItems>().type;
                 slotList[i].GetComponent<Slot>().empy = false;
+                
             }
         }
     }
@@ -119,14 +122,21 @@ public class LetterCart : MonoBehaviour
         {
             for (int j = 0; j < allSlot ; j++){
                 
+
                 if (slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type )
                 {
-                    item.GetComponent<SlotAnswer>().UpdateSlot(slotList[j].GetComponent<Slot>().icon);
-                    slotList[j].transform.GetChild(0).gameObject.SetActive(false);
-                    
+                    item.GetComponent<SlotAnswer>().UpdateSlotAnswer(slotList[j].GetComponent<Slot>().letterIcon);
+                    slotList[j].GetComponent<Slot>().UpdateCorrect(correctSprite);
+                    slotList[j].GetComponent<Slot>().isCorrect = true;
+                    //slotList[j].transform.GetChild(0).gameObject.SetActive(false);
+                }else if(slotList[j].GetComponent<Slot>().isCorrect == false && slotList[j].GetComponent<Slot>().isSelect ){
+                    slotList[j].GetComponent<Slot>().UpdateCorrect(errorSprite);
                 }
             }
+                
         }
         
     }
+
+   
 }

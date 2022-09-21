@@ -9,7 +9,7 @@ public class SlotAnswer : MonoBehaviour
     public char type;
     public Sprite icon;
 
-    public void UpdateSlot(Sprite spr){
+    public void UpdateSlotAnswer(Sprite spr){
         this.GetComponent<Image>().sprite = spr;
     }
 

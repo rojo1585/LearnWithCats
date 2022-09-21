@@ -8,9 +8,10 @@ public class Slot : MonoBehaviour
     public int id;
     public char type;
     public bool empy;
-    public Sprite icon;
+    public bool  isCorrect;
+    public Sprite letterIcon;
     public Transform slotLetterChield;
-    SlotAnswer slotAnswer;
+    //SlotAnswer slotAnswer;
 
     public int a;
     public bool isSelect;
@@ -26,12 +27,15 @@ public class Slot : MonoBehaviour
 
     public void UpdateSlot(Sprite spr){
         slotLetterChield.GetComponent<Image>().sprite = spr;
-        icon = spr;
+        letterIcon = spr;
+    }
+    public void UpdateCorrect(Sprite spr){
+        slotLetterChield.GetComponent<Image>().sprite = spr;
     }
 
 
     public void Select(){
-        isSelect = true;
+        this.isSelect = true;
     }
 
 }
