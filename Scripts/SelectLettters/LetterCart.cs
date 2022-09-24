@@ -14,6 +14,8 @@ public class LetterCart : MonoBehaviour
     public string a;
 
     public bool stop;
+
+    public int oportunities;
     
     
     
@@ -55,10 +57,11 @@ public class LetterCart : MonoBehaviour
 
     void Update()
     {
+        if (oportunities <= 0){
+            EceneManager.Instance.ShowPanelEndGame();
+        }
         if (Input.GetButtonDown("Jump")){
-            AddCorrectWord();
-            AddLetterRandom();
-            MakePanelsAnswer();
+            
             //CheckAnswer();
         }
     }
@@ -69,6 +72,7 @@ public class LetterCart : MonoBehaviour
             randNumer = Random.Range(0,25);
             if (slotList[i].GetComponent<Slot>().empy)
             {
+
                 slotList[i].GetComponent<Slot>().UpdateSlot(letters[randNumer].GetComponent<LettersItems>().icon); 
                 slotList[i].GetComponent<Slot>().type = letters[randNumer].GetComponent<LettersItems>().type;
                 slotList[i].GetComponent<Slot>().empy = false;
@@ -131,6 +135,7 @@ public class LetterCart : MonoBehaviour
                     //slotList[j].transform.GetChild(0).gameObject.SetActive(false);
                 }else if(slotList[j].GetComponent<Slot>().isCorrect == false && slotList[j].GetComponent<Slot>().isSelect ){
                     slotList[j].GetComponent<Slot>().UpdateCorrect(errorSprite);
+                    
                 }
             }
                 
@@ -138,5 +143,10 @@ public class LetterCart : MonoBehaviour
         
     }
 
-   
+    public void ShowLetters(){
+            AddCorrectWord();
+            AddLetterRandom();
+            MakePanelsAnswer();
+    }
+
 }

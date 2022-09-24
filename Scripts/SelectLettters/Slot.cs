@@ -31,11 +31,17 @@ public class Slot : MonoBehaviour
     }
     public void UpdateCorrect(Sprite spr){
         slotLetterChield.GetComponent<Image>().sprite = spr;
+        
     }
 
 
     public void Select(){
         this.isSelect = true;
     }
-
+    
+    public void RestOportunities(){
+        if(!this.isCorrect){
+            LetterCart.Instance.oportunities--;
+        }
+    }
 }

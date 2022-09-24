@@ -23,7 +23,6 @@ public class ImagesController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         
     }
     
