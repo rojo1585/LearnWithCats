@@ -9,8 +9,17 @@ public class SlotAnswer : MonoBehaviour
     public char type;
     public Sprite icon;
 
+    private void Start() {
+        empy = true;
+    }
     public void UpdateSlotAnswer(Sprite spr){
         this.GetComponent<Image>().sprite = spr;
+    }
+    
+    public void isEmpy(){
+        if(!this.empy){
+            LetterCart.Instance.countToWiner--;
+        }
     }
 
 

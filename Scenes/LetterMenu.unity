@@ -310,6 +310,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &132911187
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +554,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2050698850}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -826,6 +850,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &238831640
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +1010,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1394181797}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2038,6 +2086,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &418533054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2297,6 +2357,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1966646680}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2665,6 +2737,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &648221746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2923,6 +3007,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &703407391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3797491525533039485, guid: 8853a1bc2bcc26f4db287878649b6b0d, type: 3}
@@ -3091,6 +3187,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2092128932}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3656,6 +3764,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &843584675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +4066,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &895112821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2943364595606352665, guid: 8deddbec7bd6f59448a7a421da654ee3, type: 3}
@@ -4211,6 +4343,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &921921946
 GameObject:
   m_ObjectHideFlags: 0
@@ -4359,6 +4503,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1065318949}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4721,6 +4877,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1086837435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4970,6 +5138,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1118563479}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5578,6 +5758,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1123845833
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,6 +5809,7 @@ MonoBehaviour:
   a: 
   stop: 0
   oportunities: 3
+  countToWiner: 0
   letters:
   - {fileID: 1700350357}
   - {fileID: 703407391}
@@ -5703,7 +5896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583dd84cebc163743993c0f1d35d4c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelRestar: {fileID: 1492379539}
+  panelRestar: {fileID: 1492379539}
+  panelWin: {fileID: 2045719563}
 --- !u!1 &1167795743 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 89356583267788863, guid: f57d6bcf66e7b0749b1ae654e6b35324, type: 3}
@@ -6172,6 +6366,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1606110890}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7012,6 +7218,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1025989408}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7959,6 +8177,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1758052597 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3836805622553110744, guid: 17981600c3c60fa4d8f6e82ff131a11b, type: 3}
@@ -8190,6 +8420,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1261128015}
         m_TargetAssemblyTypeName: Slot, Assembly-CSharp
         m_MethodName: RestOportunities
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CheckWiner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9143,7 +9385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2045719564
 RectTransform:
   m_ObjectHideFlags: 0

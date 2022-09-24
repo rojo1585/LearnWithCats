@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EceneManager : MonoBehaviour
 {
-    [SerializeField] GameObject PanelRestar;
+    [SerializeField] GameObject panelRestar;
+    [SerializeField] GameObject panelWin;
 
     private static EceneManager instance;
     public static EceneManager Instance {get {return instance;}}
@@ -18,8 +19,12 @@ public class EceneManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void ShowPanelEndGame(){
-        PanelRestar.SetActive(true);
+    public void ShowPanel(int panel){
+        if(panel == 1){
+            panelWin.SetActive(true);
+        }else if(panel == 2){
+            panelRestar.SetActive(true);
+        }
     }
     public void RestarLevel(){
         SceneManager.LoadScene("GameRunCat");

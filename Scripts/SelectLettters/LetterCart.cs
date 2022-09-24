@@ -16,6 +16,7 @@ public class LetterCart : MonoBehaviour
     public bool stop;
 
     public int oportunities;
+    public int countToWiner;
     
     
     
@@ -31,6 +32,8 @@ public class LetterCart : MonoBehaviour
     
 
     public static LetterCart instance;
+    private bool init;
+
     public static LetterCart Instance {get {return instance;}}
 
     private void Awake() {
@@ -52,18 +55,22 @@ public class LetterCart : MonoBehaviour
             slotList[i] = slotLetters.transform.GetChild(i).gameObject;
             slotList[i].GetComponent<Slot>().id = i;
         }
+        init = false;
+        countToWiner = 1;
         
     }
 
     void Update()
     {
         if (oportunities <= 0){
-            EceneManager.Instance.ShowPanelEndGame();
+            EceneManager.Instance.ShowPanel(2);
         }
-        if (Input.GetButtonDown("Jump")){
-            
-            //CheckAnswer();
+        if (countToWiner <= 0)
+        {
+            EceneManager.Instance.ShowPanel(1);
         }
+        
+        
     }
 
     public void AddLetterRandom(){
@@ -112,7 +119,7 @@ public class LetterCart : MonoBehaviour
 
         allSlotAnswer = answerPanel.transform.childCount;
         slotAnswerList = new GameObject[allSlotAnswer];
-
+        countToWiner = allSlotAnswer;
         for (int i = 0; i < allSlotAnswer; i++){
             slotAnswerList[i] = answerPanel.transform.GetChild(i).gameObject;
             slotAnswerList[i].GetComponent<SlotAnswer>().type = ImagesController.Instance.splitWordList[i];
@@ -130,6 +137,8 @@ public class LetterCart : MonoBehaviour
                 if (slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type )
                 {
                     item.GetComponent<SlotAnswer>().UpdateSlotAnswer(slotList[j].GetComponent<Slot>().letterIcon);
+                    item.GetComponent<SlotAnswer>().empy = false;
+                    item.GetComponent<SlotAnswer>().type = slotList[j].GetComponent<Slot>().type;
                     slotList[j].GetComponent<Slot>().UpdateCorrect(correctSprite);
                     slotList[j].GetComponent<Slot>().isCorrect = true;
                     //slotList[j].transform.GetChild(0).gameObject.SetActive(false);
@@ -143,10 +152,26 @@ public class LetterCart : MonoBehaviour
         
     }
 
+    public void CheckWiner()
+    {
+        countToWiner = allSlotAnswer;
+        foreach (GameObject item in slotAnswerList)
+        {
+            if(!item.GetComponent<SlotAnswer>().empy){
+            countToWiner--;
+            }
+        }
+        
+        
+        
+    }
+
+
     public void ShowLetters(){
             AddCorrectWord();
             AddLetterRandom();
             MakePanelsAnswer();
+            init = true;
     }
 
 }
