@@ -25,9 +25,13 @@ public class LetterCart : MonoBehaviour
     public GameObject[] slotAnswerList;
 
     public GameObject[] stars;
+    public GameObject[] starsWinPanel;
     public GameObject slotLetters;
     [SerializeField] private GameObject answerPanel;
     [SerializeField] private GameObject panelPrefab;
+    [SerializeField] private GameObject starPanel;
+    [SerializeField] private GameObject empyStarPanel;
+
     [SerializeField] private Sprite correctSprite;
     [SerializeField] private Sprite errorSprite;
 
@@ -66,10 +70,14 @@ public class LetterCart : MonoBehaviour
     {
         if (oportunities <= 0){
             EceneManager.Instance.ShowPanel(2);
+            starPanel.SetActive(false);
+            empyStarPanel.SetActive(false);
         }
         if (countToWiner <= 0 && ready)
         {
             EceneManager.Instance.ShowPanel(1);
+            starPanel.SetActive(false);
+            empyStarPanel.SetActive(false);
         }
 
         HidenStar();
@@ -182,11 +190,18 @@ public class LetterCart : MonoBehaviour
     }
 
     public void HidenStar(){
-        if(oportunities == 2){stars[0].SetActive(false);
+        if(oportunities == 2){
+            stars[0].SetActive(false);
+            starsWinPanel[0].SetActive(false);
         }
-        if(oportunities == 1){stars[1].SetActive(false);
+        if(oportunities == 1){
+            stars[1].SetActive(false);
+            starsWinPanel[1].SetActive(false);
         }
-        if(oportunities == 0){stars[2].SetActive(false);} 
+        if(oportunities == 0){
+            stars[2].SetActive(false);
+            starsWinPanel[2].SetActive(false);
+            } 
     }
 
 

@@ -41,8 +41,7 @@ public class Slot : MonoBehaviour
     
     public void RestOportunities(){
         if(!this.isCorrect){
-            LetterCart.Instance.oportunities--;
-            
+            LetterCart.Instance.oportunities--;    
         }
     }
 }
