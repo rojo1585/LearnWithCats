@@ -9,7 +9,7 @@ public class ImagesController : MonoBehaviour
     public Texture2D[] images;
     public string[] words;
     public string selectWord;
-    private int numrRand;
+    [SerializeField]private int numrRand;
     public char[] splitWordList;
     
     public static ImagesController instance;
@@ -37,7 +37,7 @@ public class ImagesController : MonoBehaviour
     }
 
     public void SelectRandomImage(){
-        numrRand =  Random.Range(0,4);
+        numrRand =  Random.Range(0,images.Length);
         panelShowImage.GetComponent<RawImage>().texture = images[numrRand];
         selectWord = words[numrRand];
         

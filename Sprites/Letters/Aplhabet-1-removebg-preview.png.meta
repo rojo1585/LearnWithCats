@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: 7a3d9cdf6e735874dbdf243c47dbbf44
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 470
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f9bd2623cae10488cf4ba6398494ba
+      internalID: -689619115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 468
+        width: 15
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecc445f834fede4095de3329be193c9
+      internalID: 1702167567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 461
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02f986cbb0635d448462acbe4fd795a
+      internalID: 81173870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 471
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c831b835cab44893d35304d26ab9e
+      internalID: -1280638715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 470
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e5e85e319cf4e4a80fc34355be245a
+      internalID: 1389832040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 471
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b0119d6c52fba43b67f0f191bb042b
+      internalID: -976368161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 460
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c51d050903092845b41b6dc948cc4bb
+      internalID: 958701641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 470
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc1d4f7892903548b60690f694a4739
+      internalID: 169707435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 389
+        width: 26
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33281c4cfb485584796e44e80fae60e6
+      internalID: 532379107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 470
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1427479b66c7ea4449f9ec21f6f64b9b
+      internalID: 582791824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 405
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248250ba4472ad04bab45bcdb2ab1fea
+      internalID: -1610024990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 406
+        width: 15
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20e0a316f0d70c4b949cfeca3a8e912
+      internalID: 170017208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 406
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aa9cbf0b10aaf4696d2500755e97a6
+      internalID: -1831011079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 334
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02a2056ea059014d9588bf3855a0fcb
+      internalID: 1885954396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 406
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb20914f630ddc4592ecb0046c614da
+      internalID: 1937318913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 396
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f48356e38f3dd49ae223e00d23abe4
+      internalID: 95426143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 405
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cfad061e13f734aba2d1229cf6a17d
+      internalID: -1149945073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 405
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0413b1384ed60c541a62bbe10288994e
+      internalID: 321880273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 396
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7900d8cbfeab3f941846d14f4caaf592
+      internalID: 1378385589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 342
+        width: 4
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dc830b057a80f42af4621fb5a7d0c6
+      internalID: -157094774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 341
+        width: 22
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10846125568ffa84bbbe3a493e760af9
+      internalID: -689622348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 342
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf487ab2c8e50554ab5aca5dd1cd9164
+      internalID: 104526255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 342
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b761c9095b8cd6f4c80026708a425fa3
+      internalID: -1947949026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 341
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1348f05c3036783429836078933f2af1
+      internalID: 1318318045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 342
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b1a2d0770a272479862e91b212b37e
+      internalID: -912070568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 342
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2adf24ec9bbaf749af7c239dff86d6c
+      internalID: -1192933486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Aplhabet-1-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 277
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b02f05d5b0ce6e4bb3ad401ebb62f95
+      internalID: -511957965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Aplhabet-1-removebg-preview_10: -1610024990
+      Aplhabet-1-removebg-preview_17: 321880273
+      Aplhabet-1-removebg-preview_4: 1389832040
+      Aplhabet-1-removebg-preview_26: 1318318045
+      Aplhabet-1-removebg-preview_1: 1702167567
+      Aplhabet-1-removebg-preview_5: -976368161
+      Aplhabet-1-removebg-preview_24: 104526255
+      Aplhabet-1-removebg-preview_27: -912070568
+      Aplhabet-1-removebg-preview_2: 81173870
+      Aplhabet-1-removebg-preview_23: -1227785304
+      Aplhabet-1-removebg-preview_28: -1192933486
+      Aplhabet-1-removebg-preview_3: -1280638715
+      Aplhabet-1-removebg-preview_21: -1869407788
+      Aplhabet-1-removebg-preview_18: 1378385589
+      Aplhabet-1-removebg-preview_16: -1149945073
+      Aplhabet-1-removebg-preview_0: -689619115
+      Aplhabet-1-removebg-preview_6: 958701641
+      Aplhabet-1-removebg-preview_15: 95426143
+      Aplhabet-1-removebg-preview_9: 582791824
+      Aplhabet-1-removebg-preview_20: -157094774
+      Aplhabet-1-removebg-preview_8: 532379107
+      Aplhabet-1-removebg-preview_12: -1831011079
+      Aplhabet-1-removebg-preview_25: -1947949026
+      Aplhabet-1-removebg-preview_29: -511957965
+      Aplhabet-1-removebg-preview_19: 1987740896
+      Aplhabet-1-removebg-preview_14: 1937318913
+      Aplhabet-1-removebg-preview_7: 169707435
+      Aplhabet-1-removebg-preview_13: 1885954396
+      Aplhabet-1-removebg-preview_11: 170017208
+      Aplhabet-1-removebg-preview_22: -689622348
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
