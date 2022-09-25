@@ -71,6 +71,8 @@ public class LetterCart : MonoBehaviour
         {
             EceneManager.Instance.ShowPanel(1);
         }
+
+        HidenStar();
         
         
     }
@@ -163,7 +165,6 @@ public class LetterCart : MonoBehaviour
         {
             if(!item.GetComponent<SlotAnswer>().empy && ready){
                 countToWiner--;
-                stars[oportunities-1].SetActive(false);
                 
             }
         }
@@ -179,5 +180,14 @@ public class LetterCart : MonoBehaviour
             MakePanelsAnswer();
             ready = true;
     }
+
+    public void HidenStar(){
+        if(oportunities == 2){stars[0].SetActive(false);
+        }
+        if(oportunities == 1){stars[1].SetActive(false);
+        }
+        if(oportunities == 0){stars[2].SetActive(false);} 
+    }
+
 
 }

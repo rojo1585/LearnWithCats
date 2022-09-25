@@ -42,8 +42,7 @@ public class Slot : MonoBehaviour
     public void RestOportunities(){
         if(!this.isCorrect){
             LetterCart.Instance.oportunities--;
-            a++;
-            LetterCart.Instance.stars[a].SetActive(false);
+            
         }
     }
 }
