@@ -8,13 +8,7 @@ public class PlayerPlataform : MonoBehaviour
     private GameObject currentPlatform;
 
     [SerializeField] private BoxCollider2D playerCollider;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))

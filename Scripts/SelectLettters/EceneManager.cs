@@ -7,6 +7,8 @@ public class EceneManager : MonoBehaviour
 {
     [SerializeField] GameObject panelRestar;
     [SerializeField] GameObject panelWin;
+    [SerializeField] GameObject panelSelectTopic;
+    [SerializeField] GameObject panelMain;
 
     private static EceneManager instance;
     public static EceneManager Instance {get {return instance;}}
@@ -24,6 +26,9 @@ public class EceneManager : MonoBehaviour
             panelWin.SetActive(true);
         }else if(panel == 2){
             panelRestar.SetActive(true);
+        }else if(panel == 3){
+            panelSelectTopic.SetActive(false);
+            panelMain.SetActive(true);
         }
     }
     public void RestarLevel(){

@@ -71,7 +71,7 @@ public class LetterCart : MonoBehaviour
         if (oportunities <= 0){
             EceneManager.Instance.ShowPanel(2);
             starPanel.SetActive(false);
-            empyStarPanel.SetActive(false);
+            empyStarPanel.SetActive(false); 
         }
         if (countToWiner <= 0 && ready)
         {

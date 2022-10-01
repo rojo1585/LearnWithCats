@@ -6,11 +6,21 @@ using UnityEngine.UI;
 public class ImagesController : MonoBehaviour
 {   
     [SerializeField] private GameObject panelShowImage;
-    public Texture2D[] images;
-    public string[] words;
+    [Header("ListsHome")]
+    public Texture2D[] imagesHome;
+    public string[] wordsHome;
+    [Header("ListsSchool")]
+    public Texture2D[] imagesSchool;
+    public string[] wordsSchool;
+    [Header("ListsAnimals")]
+    public Texture2D[] imagesAnimals;
+    public string[] wordsAnimals;
     public string selectWord;
+    
     [SerializeField]private int numrRand;
     public char[] splitWordList;
+
+    public int selectList;
     
     public static ImagesController instance;
     public static ImagesController Instance {get {return instance;}}
@@ -22,24 +32,25 @@ public class ImagesController : MonoBehaviour
         }else
         {
             Destroy(gameObject);
+            
         }
         
+
     }
     
     private void Start() {
-        SelectRandomImage() ; 
-        SplitWord();
+        //SelectRandomImage(imagesHome, wordsHome) ; 
+        //SplitWord();
     }
     private void Update() {
-        if (Input.GetButtonDown("Jump"))
-        {                   
-        }
+        
+        
     }
 
-    public void SelectRandomImage(){
+    public void SelectRandomImage(Texture2D[] images, string[] word){
         numrRand =  Random.Range(0,images.Length);
         panelShowImage.GetComponent<RawImage>().texture = images[numrRand];
-        selectWord = words[numrRand];
+        selectWord = word[numrRand];
         
     }
 
@@ -51,6 +62,24 @@ public class ImagesController : MonoBehaviour
             splitWordList[i] = selectWord[i];
         }
     }
+
+    public void ChooseList(){
+        if (selectList == 1)
+        {                  
+            SelectRandomImage(imagesHome, wordsHome) ; 
+            SplitWord(); 
+            EceneManager.Instance.ShowPanel(3);
+        }else if(selectList == 2){
+            SelectRandomImage(imagesSchool, wordsSchool) ; 
+            SplitWord(); 
+            EceneManager.Instance.ShowPanel(3);
+        }else if(selectList == 3){
+            SelectRandomImage(imagesAnimals, wordsAnimals) ; 
+            SplitWord();
+            EceneManager.Instance.ShowPanel(3);
+        }
+    }
+
 
 
     
