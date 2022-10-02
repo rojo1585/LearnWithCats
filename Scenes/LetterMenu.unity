@@ -2914,7 +2914,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2045719564}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4639,7 +4639,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2045719564}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4692,7 +4692,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1123845837}
         m_TargetAssemblyTypeName: EceneManager, Assembly-CSharp
-        m_MethodName: RestarLevel
+        m_MethodName: NextQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: CleanPanels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6752,6 +6764,7 @@ MonoBehaviour:
   empyStarPanel: {fileID: 1399774185}
   correctSprite: {fileID: 21300118, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   errorSprite: {fileID: 21300120, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  blockSprite: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
 --- !u!4 &1123845835
 Transform:
   m_ObjectHideFlags: 0
@@ -8234,7 +8247,7 @@ RectTransform:
   m_Children:
   - {fileID: 310128960}
   m_Father: {fileID: 2045719564}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10436,7 +10449,7 @@ RectTransform:
   - {fileID: 192468472}
   - {fileID: 459108621}
   m_Father: {fileID: 2045719564}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10997,10 +11010,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 843584676}
   - {fileID: 1445920487}
   - {fileID: 1965952486}
   - {fileID: 489034894}
+  - {fileID: 843584676}
   m_Father: {fileID: 1611039456}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

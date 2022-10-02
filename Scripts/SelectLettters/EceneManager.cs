@@ -34,4 +34,10 @@ public class EceneManager : MonoBehaviour
     public void RestarLevel(){
         SceneManager.LoadScene("GameRunCat");
     }
+
+    public void NextQuest(){
+        panelWin.SetActive(false);
+        ImagesController.Instance.ChooseList();
+    
+    }
 }
