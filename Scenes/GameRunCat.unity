@@ -1187,7 +1187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -607, y: 330}
+  m_AnchoredPosition: {x: -595.7, y: 320.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &864635109
@@ -1599,7 +1599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -492, y: 330}
+  m_AnchoredPosition: {x: -480.7, y: 320.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1049682701 stripped
@@ -1645,7 +1645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 631.9426, y: 284.84875}
+  m_AnchoredPosition: {x: 607.7, y: 284.84875}
   m_SizeDelta: {x: 0, y: 94.2975}
   m_Pivot: {x: 0.9870765, y: 0.5}
 --- !u!114 &1067835325
@@ -1893,7 +1893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -549, y: 330}
+  m_AnchoredPosition: {x: -537.7, y: 320.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1152849317
@@ -3074,7 +3074,7 @@ MonoBehaviour:
   isFloor:
     serializedVersion: 2
     m_Bits: 8
-  speed: 100
+  speed: 250
   jumpForce: 8
   onTheFloor: 0
   isDead: 0

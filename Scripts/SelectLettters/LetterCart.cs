@@ -213,6 +213,9 @@ public class LetterCart : MonoBehaviour
         stars[0].SetActive(true);
         stars[1].SetActive(true);
         stars[2].SetActive(true);
+        starsWinPanel[0].SetActive(true);
+        starsWinPanel[1].SetActive(true);
+        starsWinPanel[2].SetActive(true);
         starPanel.SetActive(true);
         empyStarPanel.SetActive(true);
         oportunities = 3;

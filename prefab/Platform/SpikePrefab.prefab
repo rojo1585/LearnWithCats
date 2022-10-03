@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8955667462030416167}
   m_Layer: 0
   m_Name: SpikePrefab
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 8955667463729654204}
   - component: {fileID: 8955667463729654205}
   - component: {fileID: 8955667463729657408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

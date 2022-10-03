@@ -511,8 +511,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0, y: 25}
-  m_SizeDelta: {x: -1045.573, y: -553.3333}
+  m_AnchoredPosition: {x: 33, y: -11.202}
+  m_SizeDelta: {x: -651.6, y: -316.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108548368
 MonoBehaviour:
@@ -2146,7 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2337,7 +2337,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 68.5, y: 145.3}
+  m_CellSize: {x: 68.5, y: 90.4}
   m_Spacing: {x: -61.4, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 10
@@ -3370,7 +3370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4690,6 +4690,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1123845834}
+        m_TargetAssemblyTypeName: LetterCart, Assembly-CSharp
+        m_MethodName: RestarStarts
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1123845837}
         m_TargetAssemblyTypeName: EceneManager, Assembly-CSharp
         m_MethodName: NextQuest
@@ -6805,8 +6817,10 @@ MonoBehaviour:
   - perro
   imagesAnimals:
   - {fileID: 2800000, guid: 60a6b3902fd7d1c42a9baabbea41aa82, type: 3}
+  - {fileID: 2800000, guid: 4c31acff92cc4474b84c33db899cd218, type: 3}
   wordsAnimals:
   - elefante
+  - perro
   selectWord: 
   numrRand: 0
   splitWordList: 
@@ -6971,8 +6985,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 260, y: 25}
-  m_SizeDelta: {x: -1045.573, y: -553.3333}
+  m_AnchoredPosition: {x: 258, y: -12}
+  m_SizeDelta: {x: -651.6039, y: -316.3013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219361794
 MonoBehaviour:
@@ -6994,7 +7008,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: da7f5ce2fd8982f46b3f55be0408df57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c31acff92cc4474b84c33db899cd218, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8920,7 +8934,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611039452}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
@@ -9603,8 +9617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 3}
-  m_SizeDelta: {x: 785.07, y: 225.07}
+  m_AnchoredPosition: {x: 1.4993, y: 1.4992}
+  m_SizeDelta: {x: 782.07, y: 222.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765295621
 MonoBehaviour:
@@ -10858,8 +10872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -257, y: 25}
-  m_SizeDelta: {x: -1045.573, y: -553.3333}
+  m_AnchoredPosition: {x: -199, y: -11}
+  m_SizeDelta: {x: -651.6, y: -316.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028721985
 MonoBehaviour:
