@@ -14,4 +14,8 @@ public class LettersItems : MonoBehaviour
     void Start(){
         icon = this.GetComponent<Image>().sprite;
     }
+
+    public char TakeType(){
+        return this.type;
+    }
 }

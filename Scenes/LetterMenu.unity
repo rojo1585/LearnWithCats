@@ -3416,7 +3416,7 @@ RectTransform:
   m_Children:
   - {fileID: 985308680}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6728,6 +6728,7 @@ MonoBehaviour:
   allSlotAnswer: 0
   enableSlot: 0
   randNumer: 0
+  savedNumbers: 
   a: 0
   stop: 0
   oportunities: 3
@@ -6777,6 +6778,7 @@ MonoBehaviour:
   correctSprite: {fileID: 21300118, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   errorSprite: {fileID: 21300120, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   blockSprite: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  ab: 0
 --- !u!4 &1123845835
 Transform:
   m_ObjectHideFlags: 0
@@ -6816,11 +6818,37 @@ MonoBehaviour:
   wordsSchool:
   - perro
   imagesAnimals:
-  - {fileID: 2800000, guid: 60a6b3902fd7d1c42a9baabbea41aa82, type: 3}
-  - {fileID: 2800000, guid: 4c31acff92cc4474b84c33db899cd218, type: 3}
+  - {fileID: 2800000, guid: c992157de2246e34ea94b760a40d95af, type: 3}
+  - {fileID: 2800000, guid: 5d410756a70071549807dad4d3ecec79, type: 3}
+  - {fileID: 2800000, guid: 38f7314eb7956934bb797c44b5032d4b, type: 3}
+  - {fileID: 2800000, guid: b63c90f46e73fc64ca51b6bde436eb6a, type: 3}
+  - {fileID: 2800000, guid: f83000271bec2a249bb65b2f80536156, type: 3}
+  - {fileID: 2800000, guid: d5ec752031322fa4eaca1e92a206e78b, type: 3}
+  - {fileID: 2800000, guid: 7d931c06f995f8945b2d61f246f825c7, type: 3}
+  - {fileID: 2800000, guid: cf232aa5288a92f45a5e27b3508aa6fe, type: 3}
+  - {fileID: 2800000, guid: f1db07315a975f14e85cc4ea08dd527c, type: 3}
+  - {fileID: 2800000, guid: 290e01e982fe8c74d9b1ab4392acb7e5, type: 3}
+  - {fileID: 2800000, guid: cf5fa7cda3ba30b45980b7083024811d, type: 3}
+  - {fileID: 2800000, guid: 8063d9083fbf19041993e255bbc5b180, type: 3}
+  - {fileID: 2800000, guid: 97cd2b2f867de1d478b8c886c487c4e6, type: 3}
+  - {fileID: 2800000, guid: 195a9848cbe33334fb384923a6f81e64, type: 3}
+  - {fileID: 2800000, guid: 88c4201d840c04243b0a8c228d3a5354, type: 3}
   wordsAnimals:
-  - elefante
+  - ballena
+  - tortuga
+  - pinguino
+  - medusa
+  - tiburon
+  - delfin
+  - camaleon
+  - pez
   - perro
+  - abeja
+  - camello
+  - elefante
+  - leon
+  - chango
+  - reno
   selectWord: 
   numrRand: 0
   splitWordList: 
@@ -7008,7 +7036,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c31acff92cc4474b84c33db899cd218, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d931c06f995f8945b2d61f246f825c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9303,7 +9331,7 @@ Transform:
   - {fileID: 96204891}
   - {fileID: 1758052598}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1729811697
 GameObject:
@@ -9952,6 +9980,10 @@ PrefabInstance:
     - target: {fileID: 3836805622553110744, guid: 17981600c3c60fa4d8f6e82ff131a11b, type: 3}
       propertyPath: m_Name
       value: z
+      objectReference: {fileID: 0}
+    - target: {fileID: 3836805622553110758, guid: 17981600c3c60fa4d8f6e82ff131a11b, type: 3}
+      propertyPath: type
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 3836805622553110759, guid: 17981600c3c60fa4d8f6e82ff131a11b, type: 3}
       propertyPath: m_Pivot.x
@@ -10895,7 +10927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4808e877082832347aa2decc5ceed07b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5d4a141620d7864c81f7c88a08dca15, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -11,6 +11,8 @@ public class LetterCart : MonoBehaviour
     public int allSlotAnswer;
     public int enableSlot;
     public int randNumer;
+
+    [SerializeField] private List<int> savedNumbers = new List<int>();
     public int a;
 
     public bool stop;
@@ -87,6 +89,7 @@ public class LetterCart : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
            // CleanPanels();
+           AddCorrectWord();
         }
         
     }
@@ -104,16 +107,58 @@ public class LetterCart : MonoBehaviour
             }
         }
     }
-
+    public int ab;
 
     public void AddCorrectWord(){
-        foreach (char letter in ImagesController.Instance.splitWordList)
+
+
+        ab = 0;
+        savedNumbers.Clear();
+
+        while (savedNumbers.Count != ImagesController.Instance.splitWordList.Length){
+            ab = Random.Range(0,allSlot);
+            if(!savedNumbers.Contains(ab)){
+                savedNumbers.Add(ab);
+            }
+        }
+        foreach (GameObject letter in letters)
+        {
+            for (int i = 0; i < ImagesController.Instance.splitWordList.Length ;i++)
+            {
+                if(letter.GetComponent<LettersItems>().TakeType() == ImagesController.Instance.splitWordList[i]){
+                    if(!savedNumbers.Contains(ab)){}
+                    slotList[savedNumbers[i]].GetComponent<Slot>().UpdateSlot(letter.GetComponent<LettersItems>().icon);
+                    slotList[savedNumbers[i]].GetComponent<Slot>().type = letter.GetComponent<LettersItems>().TakeType();
+                    slotList[savedNumbers[i]].GetComponent<Slot>().empy = false;
+                    
+                    
+                }
+            }
+            
+        }
+
+/*
+        for (int j = 0; j < ImagesController.Instance.splitWordList.Length; j++)
         {
             
             for (int i = 0; i < letters.Length;i++)
             {
+                if(ImagesController.Instance.splitWordList[j] == letters[i].GetComponent<LettersItems>().type){
+                    randNumer = Random.Range(1,allSlot);
+                    slotList[randNumer].GetComponent<Slot>().UpdateSlot(letters[i].GetComponent<LettersItems>().icon);
+                    slotList[randNumer].GetComponent<Slot>().type = letters[i].GetComponent<LettersItems>().type;
+                    slotList[randNumer].GetComponent<Slot>().empy = false;
+                    
+                }
+            }
+        }
+       
+        foreach (char letter in ImagesController.Instance.selectWord)
+        {
+            for (int i = 0; i < letters.Length;i++)
+            {
                 if(letter == letters[i].GetComponent<LettersItems>().type){
-                    randNumer = Random.Range(1,19);
+                    randNumer = Random.Range(1,allSlot);
                     slotList[randNumer].GetComponent<Slot>().UpdateSlot(letters[i].GetComponent<LettersItems>().icon);
                     slotList[randNumer].GetComponent<Slot>().type = letters[i].GetComponent<LettersItems>().type;
                     slotList[randNumer].GetComponent<Slot>().empy = false;
@@ -121,11 +166,11 @@ public class LetterCart : MonoBehaviour
                 }
             }
             
-        }
+        }*/
     }
 
 
-    private void MakePanelsAnswer(){
+    public void MakePanelsAnswer(){
         
 
         for (int i = 0; i < ImagesController.Instance.selectWord.Length; i++)
@@ -189,7 +234,7 @@ public class LetterCart : MonoBehaviour
 
     public void ShowLetters(){
             AddCorrectWord();
-            AddLetterRandom();
+            //AddLetterRandom();
             MakePanelsAnswer();
             ready = true;
     }
