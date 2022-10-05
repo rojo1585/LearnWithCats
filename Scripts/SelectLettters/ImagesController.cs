@@ -9,9 +9,9 @@ public class ImagesController : MonoBehaviour
     [Header("ListsHome")]
     public Texture2D[] imagesHome;
     public string[] wordsHome;
-    [Header("ListsSchool")]
-    public Texture2D[] imagesSchool;
-    public string[] wordsSchool;
+    [Header("ListsFood")]
+    public Texture2D[] imagesFood;
+    public string[] wordsFood;
     [Header("ListsAnimals")]
     public Texture2D[] imagesAnimals;
     public string[] wordsAnimals;
@@ -19,8 +19,9 @@ public class ImagesController : MonoBehaviour
     
     [SerializeField]private int numrRand;
     public char[] splitWordList;
-
+    [SerializeField] private List<int> savedNumbers = new List<int>();
     public int selectList;
+    private int a;
     
     public static ImagesController instance;
     public static ImagesController Instance {get {return instance;}}
@@ -48,10 +49,10 @@ public class ImagesController : MonoBehaviour
     }
 
     public void SelectRandomImage(Texture2D[] images, string[] word){
-        numrRand =  Random.Range(0,images.Length);
-        panelShowImage.GetComponent<RawImage>().texture = images[numrRand];
-        selectWord = word[numrRand];
         
+        panelShowImage.GetComponent<RawImage>().texture = images[savedNumbers[a]];
+        selectWord = word[savedNumbers[a]];
+        a += 1;
     }
 
 
@@ -63,17 +64,30 @@ public class ImagesController : MonoBehaviour
         }
     }
 
+    public void GenarateNumRand(Texture2D[] list ){
+        while (savedNumbers.Count != list.Length){
+            numrRand = Random.Range(0,list.Length);
+            if(!savedNumbers.Contains(numrRand)){
+                savedNumbers.Add(numrRand);
+            }
+        }
+    }
+
     public void ChooseList(){
         if (selectList == 1)
-        {                  
+        {   
+            GenarateNumRand(imagesHome);               
             SelectRandomImage(imagesHome, wordsHome) ; 
             SplitWord(); 
+
             EceneManager.Instance.ShowPanel(3);
         }else if(selectList == 2){
-            SelectRandomImage(imagesSchool, wordsSchool) ; 
+            GenarateNumRand(imagesFood);  
+            SelectRandomImage(imagesFood, wordsFood) ; 
             SplitWord(); 
             EceneManager.Instance.ShowPanel(3);
         }else if(selectList == 3){
+            GenarateNumRand(imagesAnimals);  
             SelectRandomImage(imagesAnimals, wordsAnimals) ; 
             SplitWord();
             EceneManager.Instance.ShowPanel(3);

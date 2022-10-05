@@ -234,7 +234,7 @@ public class LetterCart : MonoBehaviour
 
     public void ShowLetters(){
             AddCorrectWord();
-            //AddLetterRandom();
+            AddLetterRandom();
             MakePanelsAnswer();
             ready = true;
     }
