@@ -82,6 +82,7 @@ public class LetterCart : MonoBehaviour
             starPanel.SetActive(false);
             empyStarPanel.SetActive(false);
             ready = false;
+            ScoreLetters.Instance.AddPointToScore(1);
         }
 
         HidenStar();
@@ -226,9 +227,6 @@ public class LetterCart : MonoBehaviour
                 
             }
         }
-        
-        
-        
     }
 
 

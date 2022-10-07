@@ -38,6 +38,14 @@ public class EceneManager : MonoBehaviour
     public void NextQuest(){
         panelWin.SetActive(false);
         ImagesController.Instance.ChooseList();
-    
+    }
+
+    public void BackToSelectMenu(){
+        panelMain.SetActive(false);
+        panelSelectTopic.SetActive(true);
+    }
+
+    public void HidePanelWin(){
+        panelWin.SetActive(false);
     }
 }

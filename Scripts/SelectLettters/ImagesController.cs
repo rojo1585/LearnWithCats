@@ -17,6 +17,10 @@ public class ImagesController : MonoBehaviour
     public string[] wordsAnimals;
     public string selectWord;
     
+    [SerializeField]private GameObject medalOne;
+    [SerializeField]private GameObject medalTwo;
+    [SerializeField]private GameObject medalThree;
+
     [SerializeField]private int numrRand;
     public char[] splitWordList;
     [SerializeField] private List<int> savedNumbers = new List<int>();
@@ -44,8 +48,18 @@ public class ImagesController : MonoBehaviour
         //SplitWord();
     }
     private void Update() {
-        
-        
+    
+        if (selectList == 1)
+        {   
+            ScoreLetters.Instance.GetMedal(imagesHome, medalOne);
+            medalOne.SetActive(true);
+        }else if(selectList == 2){
+            ScoreLetters.Instance.GetMedal(imagesFood, medalTwo);
+            medalTwo.SetActive(true);
+        }else if(selectList == 3){
+            ScoreLetters.Instance.GetMedal(imagesAnimals, medalThree);
+            medalThree.SetActive(true);
+        }
     }
 
     public void SelectRandomImage(Texture2D[] images, string[] word){
@@ -79,6 +93,7 @@ public class ImagesController : MonoBehaviour
             GenarateNumRand(imagesHome);               
             SelectRandomImage(imagesHome, wordsHome) ; 
             SplitWord(); 
+
 
             EceneManager.Instance.ShowPanel(3);
         }else if(selectList == 2){
