@@ -11,6 +11,8 @@ public class ScoreLetters : MonoBehaviour
     
 
     [SerializeField] private Sprite[] medalsSprite;
+    
+
 
     public static ScoreLetters instance;
     public static ScoreLetters Instance {get {return instance;}}
@@ -21,22 +23,36 @@ public class ScoreLetters : MonoBehaviour
         }else{Destroy(gameObject);}
     }
 
+    private void Update() {
+        if (score > 0 )
+        {
+            
+        }
+    }
+
     public void AddPointToScore(int cant){
         score += cant;
     }
 
-    public void GetMedal(Texture2D[] list,GameObject panel){
+    public void GetMedal(Texture2D[] list,GameObject panel,int score){
 
         if (score == list.Length )
         {
             panel.GetComponent<Image>().sprite = medalsSprite[0];
             EceneManager.Instance.BackToSelectMenu();
             EceneManager.Instance.HidePanelWin();
+            LetterCart.Instance.CleanPanels();
+            ImagesController.Instance.CleanListNumRand();
+            score = 0;
 
         }else if(score <= (list.Length / 2) && score >= (list.Length / 3)){
             panel.GetComponent<Image>().sprite = medalsSprite[1];
-        }else if(score <= (list.Length / 3)){
+        }else if(score >= (list.Length / 3) && score <= (list.Length / 2)){
             panel.GetComponent<Image>().sprite = medalsSprite[2];
         }
+    }
+
+    public void ResetScore(){
+        score=0;
     }
 }

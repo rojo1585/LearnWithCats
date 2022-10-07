@@ -26,6 +26,9 @@ public class ImagesController : MonoBehaviour
     [SerializeField] private List<int> savedNumbers = new List<int>();
     public int selectList;
     private int a;
+    [SerializeField] private int scoreOne;
+    [SerializeField] private int scoreTwo;
+    [SerializeField] private int scoreThree;
     
     public static ImagesController instance;
     public static ImagesController Instance {get {return instance;}}
@@ -51,13 +54,16 @@ public class ImagesController : MonoBehaviour
     
         if (selectList == 1)
         {   
-            ScoreLetters.Instance.GetMedal(imagesHome, medalOne);
+            scoreOne = ScoreLetters.Instance.score;
+            ScoreLetters.Instance.GetMedal(imagesHome, medalOne, scoreOne);
             medalOne.SetActive(true);
         }else if(selectList == 2){
-            ScoreLetters.Instance.GetMedal(imagesFood, medalTwo);
+            scoreTwo = ScoreLetters.Instance.score;
+            ScoreLetters.Instance.GetMedal(imagesFood, medalTwo,scoreTwo);
             medalTwo.SetActive(true);
         }else if(selectList == 3){
-            ScoreLetters.Instance.GetMedal(imagesAnimals, medalThree);
+            scoreThree = ScoreLetters.Instance.score;
+            ScoreLetters.Instance.GetMedal(imagesAnimals, medalThree, scoreThree);
             medalThree.SetActive(true);
         }
     }
@@ -85,6 +91,11 @@ public class ImagesController : MonoBehaviour
                 savedNumbers.Add(numrRand);
             }
         }
+    }
+
+    public void CleanListNumRand(){
+        savedNumbers.Clear();
+        a =0;
     }
 
     public void ChooseList(){
