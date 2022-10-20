@@ -39,20 +39,24 @@ public class ScoreLetters : MonoBehaviour
         if (score == list.Length )
         {
             panel.GetComponent<Image>().sprite = medalsSprite[0];
-            EceneManager.Instance.BackToSelectMenu();
-            EceneManager.Instance.HidePanelWin();
-            LetterCart.Instance.CleanPanels();
-            ImagesController.Instance.CleanListNumRand();
-            score = 0;
+            
 
-        }else if(score <= (list.Length / 2) && score >= (list.Length / 3)){
+        }else if(score >= (list.Length / 3)){
             panel.GetComponent<Image>().sprite = medalsSprite[1];
-        }else if(score >= (list.Length / 3) && score <= (list.Length / 2)){
+        }else if(score >= (list.Length / 3)){
             panel.GetComponent<Image>().sprite = medalsSprite[2];
         }
     }
 
     public void ResetScore(){
         score=0;
+    }
+
+    public void ChngeTopic(){
+        EceneManager.Instance.BackToSelectMenu();
+            EceneManager.Instance.HidePanelWin();
+            LetterCart.Instance.CleanPanels();
+            ImagesController.Instance.CleanListNumRand();
+            score = 0;
     }
 }
