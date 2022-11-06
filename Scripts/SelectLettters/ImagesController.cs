@@ -25,7 +25,7 @@ public class ImagesController : MonoBehaviour
     public char[] splitWordList;
     [SerializeField] private List<int> savedNumbers = new List<int>();
     public int selectList;
-    private int a;
+    [SerializeField]private int a;
     [SerializeField] private int scoreOne;
     [SerializeField] private int scoreTwo;
     [SerializeField] private int scoreThree;
@@ -70,9 +70,16 @@ public class ImagesController : MonoBehaviour
 
     public void SelectRandomImage(Texture2D[] images, string[] word){
         
-        panelShowImage.GetComponent<RawImage>().texture = images[savedNumbers[a]];
-        selectWord = word[savedNumbers[a]];
-        a += 1;
+        if (savedNumbers.Count > a)
+        {
+            panelShowImage.GetComponent<RawImage>().texture = images[savedNumbers[a]];
+            selectWord = word[savedNumbers[a]];
+            a += 1;
+        }else
+        {
+            ScoreLetters.Instance.ChngeTopic();
+        }
+        
     }
 
 
@@ -104,8 +111,6 @@ public class ImagesController : MonoBehaviour
             GenarateNumRand(imagesHome);               
             SelectRandomImage(imagesHome, wordsHome) ; 
             SplitWord(); 
-
-
             EceneManager.Instance.ShowPanel(3);
         }else if(selectList == 2){
             GenarateNumRand(imagesFood);  

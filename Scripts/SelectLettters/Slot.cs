@@ -17,13 +17,17 @@ public class Slot : MonoBehaviour
     public bool isSelect;
 
     //public Trasform slotLetterChield;
-
-    void Start(){
+    void Awake(){
         slotLetterChield = this.transform.GetChild(0);
         
         empy = true;
+
+    }    
+    void Start(){
+        
         
     }
+    
 
     public void UpdateSlot(Sprite spr){
         slotLetterChield.GetComponent<Image>().sprite = spr;
@@ -43,5 +47,10 @@ public class Slot : MonoBehaviour
         if(!this.isCorrect){
             LetterCart.Instance.oportunities--;    
         }
+    }
+
+    public void ActionButton(){
+        LetterCart.Instance.CheckAnswer();
+        LetterCart.Instance.CheckWiner();
     }
 }

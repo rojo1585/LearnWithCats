@@ -9,6 +9,8 @@ public class LetterCart : MonoBehaviour
 
     public int allSlot;
     public int allSlotAnswer;
+
+    public int allSlotLetter;
     public int enableSlot;
     public int randNumer;
 
@@ -25,11 +27,13 @@ public class LetterCart : MonoBehaviour
     public GameObject[] letters;
     public GameObject[] slotList;
     public GameObject[] slotAnswerList;
+    public GameObject[] slotListLetter;
 
     public GameObject[] stars;
     public GameObject[] starsWinPanel;
     public GameObject slotLetters;
     [SerializeField] private GameObject answerPanel;
+    [SerializeField] private GameObject letterSlotPanelPrefab;
     [SerializeField] private GameObject panelPrefab;
     [SerializeField] private GameObject starPanel;
     [SerializeField] private GameObject empyStarPanel;
@@ -55,22 +59,15 @@ public class LetterCart : MonoBehaviour
     }
     void Start()
     {
-        
-
-        allSlot = slotLetters.transform.childCount;
-        slotList = new GameObject[allSlot];
-        
-        for (int i = 0; i < allSlot; i++){
-            slotList[i] = slotLetters.transform.GetChild(i).gameObject;
-            slotList[i].GetComponent<Slot>().id = i;
-        }
-        
         countToWiner = 1;
-        
     }
 
     void Update()
     {
+
+        if(Input.GetButtonDown("Jump")){
+            MakePanelsLetter();
+        }
         if (oportunities <= 0){
             EceneManager.Instance.ShowPanel(2);
             starPanel.SetActive(false);
@@ -87,12 +84,18 @@ public class LetterCart : MonoBehaviour
 
         HidenStar();
         
-        if (Input.GetButtonDown("Jump"))
-        {
-           // CleanPanels();
-           AddCorrectWord();
-        }
         
+    }
+
+
+        
+    public void getSlot(){
+        allSlot = slotLetters.transform.childCount;
+        slotList = new GameObject[allSlot];
+        for (int i = 0; i < allSlot; i++){
+            slotList[i] = slotLetters.transform.GetChild(i).gameObject;
+            slotList[i].GetComponent<Slot>().id = i;
+        }
     }
 
     public void AddLetterRandom(){
@@ -178,6 +181,7 @@ public class LetterCart : MonoBehaviour
         {
             GameObject panel  = Instantiate(panelPrefab);
             panel.transform.SetParent(answerPanel.transform);
+            
         }
 
         allSlotAnswer = answerPanel.transform.childCount;
@@ -186,8 +190,19 @@ public class LetterCart : MonoBehaviour
         for (int i = 0; i < allSlotAnswer; i++){
             slotAnswerList[i] = answerPanel.transform.GetChild(i).gameObject;
             slotAnswerList[i].GetComponent<SlotAnswer>().type = ImagesController.Instance.splitWordList[i];
+
         }
         //panel.transform.scale = new Vector3(1,1,0);
+    }
+
+    public void MakePanelsLetter(){
+        int panleLength = ImagesController.Instance.selectWord.Length+2;
+        for (int i = 0; i < panleLength; i++)
+        {
+            GameObject panel  = Instantiate(letterSlotPanelPrefab);
+            panel.transform.SetParent(slotLetters.transform);
+        }
+
     }
 
     public void CheckAnswer(){
@@ -231,9 +246,12 @@ public class LetterCart : MonoBehaviour
 
 
     public void ShowLetters(){
+            MakePanelsLetter();
+            MakePanelsAnswer();
+            //HidenSlotPanel();
+            getSlot();
             AddCorrectWord();
             AddLetterRandom();
-            MakePanelsAnswer();
             ready = true;
     }
 
@@ -267,7 +285,7 @@ public class LetterCart : MonoBehaviour
 
     public void CleanPanels(){
         
-        for (int i = 0; i < allSlot; i++)
+        /*for (int i = 0; i < allSlot; i++)
         {
             
             if (!slotList[i].GetComponent<Slot>().empy)
@@ -278,11 +296,17 @@ public class LetterCart : MonoBehaviour
                 slotList[i].GetComponent<Slot>().isCorrect = false;
                 slotList[i].GetComponent<Slot>().isSelect = false;
             }
+        }*/
+
+ 
+        for (int i =0 ; i < allSlot; i++) {
+            Destroy(slotList[i].gameObject);
         }
 
         for (int i = 0; i < allSlotAnswer; i++){
             Destroy(slotAnswerList[i].gameObject);
         }
+       
     }
 
 
