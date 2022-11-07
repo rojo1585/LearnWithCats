@@ -36,8 +36,15 @@ public class EceneManager : MonoBehaviour
     }
 
     public void NextQuest(){
-        panelWin.SetActive(false);
-        ImagesController.Instance.ChooseList();
+        if (ImagesController.Instance.IsCompleteTopic())
+        {
+            panelWin.SetActive(false);
+            ImagesController.Instance.ChooseList();
+        }else
+        {
+            ScoreLetters.Instance.ChngeTopic();
+        }
+        
     }
 
     public void BackToSelectMenu(){

@@ -69,17 +69,16 @@ public class ImagesController : MonoBehaviour
     }
 
     public void SelectRandomImage(Texture2D[] images, string[] word){
-        
-        if (savedNumbers.Count > a)
-        {
             panelShowImage.GetComponent<RawImage>().texture = images[savedNumbers[a]];
             selectWord = word[savedNumbers[a]];
             a += 1;
-        }else
-        {
-            ScoreLetters.Instance.ChngeTopic();
+    }
+
+    public bool IsCompleteTopic(){
+        if (savedNumbers.Count > a){
+            return true;
         }
-        
+        return false;
     }
 
 
@@ -112,12 +111,12 @@ public class ImagesController : MonoBehaviour
             SelectRandomImage(imagesHome, wordsHome) ; 
             SplitWord(); 
             EceneManager.Instance.ShowPanel(3);
-        }else if(selectList == 2){
+        }else if(selectList == 2 ){
             GenarateNumRand(imagesFood);  
             SelectRandomImage(imagesFood, wordsFood) ; 
             SplitWord(); 
             EceneManager.Instance.ShowPanel(3);
-        }else if(selectList == 3){
+        }else if(selectList == 3 ){
             GenarateNumRand(imagesAnimals);  
             SelectRandomImage(imagesAnimals, wordsAnimals) ; 
             SplitWord();

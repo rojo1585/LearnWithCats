@@ -53,10 +53,10 @@ public class ScoreLetters : MonoBehaviour
     }
 
     public void ChngeTopic(){
-        EceneManager.Instance.BackToSelectMenu();
-            EceneManager.Instance.HidePanelWin();
-            LetterCart.Instance.CleanPanels();
-            ImagesController.Instance.CleanListNumRand();
-            score = 0;
+                EceneManager.Instance.BackToSelectMenu();
+                EceneManager.Instance.HidePanelWin();
+                LetterCart.Instance.CleanPanels();
+                ImagesController.Instance.CleanListNumRand();
+                score = 0;
     }
 }
