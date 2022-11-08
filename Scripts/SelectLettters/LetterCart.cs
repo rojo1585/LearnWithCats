@@ -156,7 +156,6 @@ public class LetterCart : MonoBehaviour
                 }
             }
         }
-       
         foreach (char letter in ImagesController.Instance.selectWord)
         {
             for (int i = 0; i < letters.Length;i++)
@@ -211,7 +210,6 @@ public class LetterCart : MonoBehaviour
         {
             for (int j = 0; j < allSlot ; j++){
                 
-
                 if (slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type )
                 {
                     item.GetComponent<SlotAnswer>().UpdateSlotAnswer(slotList[j].GetComponent<Slot>().letterIcon);
@@ -222,8 +220,6 @@ public class LetterCart : MonoBehaviour
                     //slotList[j].transform.GetChild(0).gameObject.SetActive(false);
                 }else if(!slotList[j].GetComponent<Slot>().isCorrect && slotList[j].GetComponent<Slot>().isSelect && item.GetComponent<SlotAnswer>().type != slotList[j].GetComponent<Slot>().type ){
                     slotList[j].GetComponent<Slot>().UpdateCorrect(errorSprite);
-                    
-                    
                 }
             }
                 
@@ -243,6 +239,8 @@ public class LetterCart : MonoBehaviour
             }
         }
     }
+
+
 
 
     public void ShowLetters(){
@@ -296,9 +294,7 @@ public class LetterCart : MonoBehaviour
                 slotList[i].GetComponent<Slot>().isCorrect = false;
                 slotList[i].GetComponent<Slot>().isSelect = false;
             }
-        }*/
-
- 
+        }*/ 
         for (int i =0 ; i < allSlot; i++) {
             Destroy(slotList[i].gameObject);
         }
@@ -306,8 +302,29 @@ public class LetterCart : MonoBehaviour
         for (int i = 0; i < allSlotAnswer; i++){
             Destroy(slotAnswerList[i].gameObject);
         }
-       
     }
 
+    public void Help(int option){
+        if(option == 1){
+            oportunities --;
+            char typeLetterToHelp = slotAnswerList[0].GetComponent<SlotAnswer>().type; 
+            foreach (GameObject item in slotAnswerList)
+            {
+                for (int j = 0; j < allSlot ; j++){
+                
+                    if (item.GetComponent<SlotAnswer>().type == slotList[j].GetComponent<Slot>().type && item.GetComponent<SlotAnswer>().type == typeLetterToHelp){ 
+                    {
+                        item.GetComponent<SlotAnswer>().UpdateSlotAnswer(slotList[j].GetComponent<Slot>().letterIcon);
+                        item.GetComponent<SlotAnswer>().empy = false;
+                        item.GetComponent<SlotAnswer>().type = slotList[j].GetComponent<Slot>().type;
+                        slotList[j].GetComponent<Slot>().UpdateCorrect(correctSprite);
+                        slotList[j].GetComponent<Slot>().isCorrect = true;
+                        //slotList[j].transform.GetChild(0)gameObject.SetActive(false);
+                    }
+                }  
+                }   
+            }
+        }
+    }
 
 }
